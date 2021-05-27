@@ -71,3 +71,7 @@ SELECT last_name, salary, email FROM employees;
 
 #3. 查询表中的所有字段
 SELECT * FROM employees;
+
+#4. 查询常量值
+SELECT 100;
+SELECT 'john';
