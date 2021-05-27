@@ -79,4 +79,4 @@ WHERE last_name LIKE '__n_l%';
 #案例3: 查询员工名中第二个字符为_的员工名
 SELECT last_name
 FROM employees
-WHERE last_name LIKE '_\_%';
+WHERE last_name LIKE '_$_%' ESCAPE '$';
