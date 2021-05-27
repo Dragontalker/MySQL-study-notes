@@ -51,3 +51,25 @@ SELECT output;
 
 #案例： 查询员工表中涉及到的所有的部门编号
 SELECT DISTINCT department_id FROM employees;
+
+#9. +号的作用
+
+/*
+java中的+号:
+1. 运算符, 两个操作数哦都为数值型
+2. 连接符, 只要有一个操作数为字符串
+
+mysql中的+号：
+仅仅只有一个功能: 运算符
+
+select 100+90; 两个操作数都为数值型, 则做加法运算
+select '123' + 90; 有其中一方为字符型, 试图将字符型数值转换为数值型
+	如果转换成功, 则继续做加法运算
+    
+select 'john' + 90; 如果转换失败, 则将字符型数值转换为0
+
+select null + 0; 只要中一方为null, 则结果肯定为null    
+*/
+
+#案例: 查询员工名和姓连接成一个字段, 并显示为 姓名
+SELECT CONCAT(last_name,' ', first_name) AS full_name FROM employees;
