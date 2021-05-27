@@ -15,6 +15,10 @@ WHERE
 		条件运算符: > < = != (or <>) >= <=
 	二、按逻辑表达式筛选
 		逻辑运算符: && || ! and or not (推荐使用)
+        作用: 用于连接条件表达式
+        &&和and: 两个条件都有true, 结果为true, 反之为false
+        ||和or: 只要有一个条件都有true, 结果为true, 反之为false
+        !和not: 如果连接的条件为false, 返回true
 	三、模糊查询
 		like
         between and
@@ -33,3 +37,5 @@ WHERE salary > 12000;
 SELECT first_name, last_name, department_id
 FROM employees
 WHERE department_id <> 90;
+
+#2. 按逻辑表达式筛选
