@@ -39,3 +39,8 @@ FROM employees
 WHERE department_id <> 90;
 
 #2. 按逻辑表达式筛选
+
+#案例1： 查询工资在10000到20000之间的员工名、工资以及奖金
+SELECT last_name, salary, commission_pct
+FROM employees
+WHERE salary >= 10000 AND salary <= 20000;
