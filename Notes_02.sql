@@ -108,6 +108,10 @@ FROM employees
 WHERE job_id IN ('IT_PROG', 'AD_', 'AD_PRES');
 
 #4. is null
+/*
+=或<>不能用于判断null值
+NULL必须和IS搭配使用
+*/
 
 #案例1： 查询没有奖金的员工名和奖金率
 SELECT last_name, commission_pct
