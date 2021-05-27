@@ -83,7 +83,20 @@ WHERE last_name LIKE '_$_%' ESCAPE '$';
 
 #2. between and
 
+/*
+1. 使用between and可以提高语句的简洁度
+2. 包含临界值
+3. 两个临界值不能调换顺序
+*/
+
 #案例1: 查询员工编号100到120之间的员工信息
 SELECT *
 FROM employees
-WHERE employee_id BETWEEN 100 AND 200;
+WHERE employee_id BETWEEN 100 AND 120;
+
+#3. in
+#案例: 查询员工的公众编号是 IT_PROG, AD_VP, AD_PRES的一个员工名和公众编号
+
+SELECT last_name, job_id
+FROM employees
+WHERE job_id IN ('IT_PROG', 'AD_VP', 'AD_PRES');
