@@ -49,4 +49,8 @@ CREATE TABLE jobs (
 语法: select 查询列表 from 表名；
 
 类似于: System.out.println(打印输出);
+
+特点：
+1. 查询列表可以是： 表中的字段、常量值、表达式、函数
+2. 查询的结果是一个虚拟的表格
 */
