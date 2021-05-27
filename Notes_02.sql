@@ -21,3 +21,10 @@ WHERE
         in 
         is null
 */
+
+#1. 按条件表达式筛选
+
+#案例1: 查询员工工资>12000的员工信息
+SELECT *
+FROM employees
+WHERE salary > 12000;
