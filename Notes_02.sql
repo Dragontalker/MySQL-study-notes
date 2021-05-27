@@ -49,3 +49,13 @@ WHERE salary >= 10000 AND salary <= 20000;
 SELECT *
 FROM employees
 WHERE department_id < 90 OR department_id > 110 OR salary > 15000;
+
+#3. 模糊查询
+
+/*
+like
+between and
+in
+is null | is not null
+*/
+
