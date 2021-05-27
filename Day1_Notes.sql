@@ -42,3 +42,7 @@ SELECT last_name AS lastName, first_anme AS firstName FROM employees;
 
 #方式二: 使用空格
 SELECT last_name lastName, first_name firstName FROM employees;
+
+#案例: 查询salary, 显示结果为output
+SELECT salary AS output FROM employees;
+SELECT output;
