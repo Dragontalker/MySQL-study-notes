@@ -117,3 +117,10 @@ NULL必须和IS搭配使用
 SELECT last_name, commission_pct
 FROM employees
 WHERE commission_pct IS NULL;
+
+#安全等于<=>
+
+#案例1： 查询没有奖金的员工名和奖金率
+SELECT last_name, commission_pct
+FROM employees
+WHERE commission_pct <=> NULL;
