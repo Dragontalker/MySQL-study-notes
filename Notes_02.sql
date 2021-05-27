@@ -54,8 +54,19 @@ WHERE department_id < 90 OR department_id > 110 OR salary > 15000;
 
 /*
 like
+特点:
+1. 一般和通配符搭配使用
+	通配符：
+	% 任意多个字符, 包含0个字符
+    _ 任意单个字符, 只有一个
 between and
 in
 is null | is not null
 */
 
+#1. like
+
+#案例1： 查询员工名中包含字符a的员工信息
+SELECT *
+FROM employees
+WHERE (first_name LIKE '%a%') OR (last_Name LIKE '%a%');
