@@ -71,7 +71,12 @@ SELECT *
 FROM employees
 WHERE (first_name LIKE '%a%') OR (last_Name LIKE '%a%');
 
-#案例2： 查询员工名中第三个字符为e, 第五个字符为a的员工名和工资
+#案例2： 查询员工名中第三个字符为n, 第五个字符为l的员工名和工资
 SELECT last_name, salary
 FROM employees
 WHERE last_name LIKE '__n_l%';
+
+#案例3: 查询员工名中第二个字符为_的员工名
+SELECT last_name
+FROM employees
+WHERE last_name LIKE '_\_%';
