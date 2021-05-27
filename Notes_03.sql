@@ -7,3 +7,6 @@ WHERE commission_pct IS NULL AND salary < 18000;
 SELECT *
 FROM employees
 WHERE job_id <> 'IT' OR salary = 12000;
+
+#3. 查看部门departments表的结构, 查询结果如下
+DESC departments;
