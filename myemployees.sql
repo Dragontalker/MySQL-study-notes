@@ -14,8 +14,6 @@ CREATE TABLE departments (
 ); 
 
 DROP TABLE IF EXISTS employees;
-DROP TABLE IF EXISTS locations;
-DROP TABLE IF EXISTS jobs;
 
 CREATE TABLE employees (
 	employee_id INT AUTO_INCREMENT,
@@ -30,7 +28,12 @@ CREATE TABLE employees (
     department_id INT NULL,
     hirredate DATETIME NULL,
     PRIMARY KEY (employee_id)
-);    
+);  
+
+DROP TABLE IF EXISTS locations;
+DROP TABLE IF EXISTS jobs;
+
+  
 
 
 
