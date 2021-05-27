@@ -30,12 +30,17 @@ CREATE TABLE employees (
     PRIMARY KEY (employee_id)
 );  
 
-DROP TABLE IF EXISTS locations;
 DROP TABLE IF EXISTS jobs;
 
-  
+CREATE TABLE jobs (
+	job_id INT AUTO_INCREMENT,
+    job_title VARCHAR(35) NULL,
+    min_salary INT NULL,
+    max_salary INT NULL,
+    PRIMARY KEY (job_id)
+);  
 
-
+DROP TABLE IF EXISTS locations;
 
 CREATE TABLE locations (
 	location_id INT AUTO_INCREMENT,
@@ -45,14 +50,6 @@ CREATE TABLE locations (
     state_province VARCHAR(25) NULL,
     country_id INT NULL,
     PRIMARY KEY (location_id)
-);
-
-CREATE TABLE jobs (
-	job_id INT AUTO_INCREMENT,
-    job_title VARCHAR(35) NULL,
-    min_salary INT NULL,
-    max_salary INT NULL,
-    PRIMARY KEY (job_id)
 );
 
 #进阶1： 基础查询
