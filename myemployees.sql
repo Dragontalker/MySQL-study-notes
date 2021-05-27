@@ -44,6 +44,9 @@ CREATE TABLE jobs (
     PRIMARY KEY (job_id)
 );
 
+#进阶1： 基础查询
+/*
+语法: select 查询列表 from 表名；
 
-SELECT *
-FROM employees;
+类似于: System.out.println(打印输出);
+*/
