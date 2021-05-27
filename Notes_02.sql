@@ -124,3 +124,14 @@ WHERE commission_pct IS NULL;
 SELECT last_name, commission_pct
 FROM employees
 WHERE commission_pct <=> NULL;
+
+#案例2： 查询工资为12000的员工信息
+SELECT last_name, salary
+FROM employees
+WHERE salary <=> 12000;
+
+#is null vs. <=>
+/*
+IS NULL: 只能判断null值, 可读性较高
+<=>: 即可以判断null值, 也可以判断其他数据类型, 但可读性较低
+*/
