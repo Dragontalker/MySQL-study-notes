@@ -95,8 +95,21 @@ FROM employees
 WHERE employee_id BETWEEN 100 AND 120;
 
 #3. in
+/*
+含义: 判断某字段的值是否属于in列表中的某一项
+特点: 
+	1. 使用in提高语言简洁度
+    2. in列表的值类型必须统一或兼容
+*/
 #案例: 查询员工的公众编号是 IT_PROG, AD_VP, AD_PRES的一个员工名和公众编号
 
 SELECT last_name, job_id
 FROM employees
-WHERE job_id IN ('IT_PROG', 'AD_VP', 'AD_PRES');
+WHERE job_id IN ('IT_PROG', 'AD_', 'AD_PRES');
+
+#4. is null
+
+#案例1： 查询没有奖金的员工名和奖金率
+SELECT last_name, commission_pct
+FROM employees
+WHERE commission_pct IS NULL;
