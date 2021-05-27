@@ -80,3 +80,10 @@ WHERE last_name LIKE '__n_l%';
 SELECT last_name
 FROM employees
 WHERE last_name LIKE '_$_%' ESCAPE '$';
+
+#2. between and
+
+#案例1: 查询员工编号100到120之间的员工信息
+SELECT *
+FROM employees
+WHERE employee_id BETWEEN 100 AND 200;
