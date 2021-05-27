@@ -28,3 +28,8 @@ WHERE
 SELECT *
 FROM employees
 WHERE salary > 12000;
+
+#案例2: 查询部门编号不等于90号的员工名和部门编号
+SELECT first_name, last_name, department_id
+FROM employees
+WHERE department_id <> 90;
