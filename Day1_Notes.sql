@@ -46,3 +46,8 @@ SELECT last_name lastName, first_name firstName FROM employees;
 #案例: 查询salary, 显示结果为output
 SELECT salary AS output FROM employees;
 SELECT output;
+
+#8. 去重
+
+#案例： 查询员工表中涉及到的所有的部门编号
+SELECT DISTINCT department_id FROM employees;
