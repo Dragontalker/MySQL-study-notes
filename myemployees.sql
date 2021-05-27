@@ -3,10 +3,19 @@
 
 USE myemployees;
 
+DROP TABLE IF EXISTS departments;
+
+CREATE TABLE departments (
+	department_id INT AUTO_INCREMENT,
+	department_name VARCHAR(3) NULL,
+    manager_id INT NULL,
+    location_id INT NULL,
+    PRIMARY KEY (department_id)
+); 
+
 DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS locations;
 DROP TABLE IF EXISTS jobs;
-DROP TABLE IF EXISTS departments;
 
 CREATE TABLE employees (
 	employee_id INT AUTO_INCREMENT,
@@ -23,13 +32,7 @@ CREATE TABLE employees (
     PRIMARY KEY (employee_id)
 );    
 
-CREATE TABLE departments (
-	department_id INT AUTO_INCREMENT,
-	department_name VARCHAR(3) NULL,
-    manager_id INT NULL,
-    location_id INT NULL,
-    PRIMARY KEY (department_id)
-); 
+
 
 CREATE TABLE locations (
 	location_id INT AUTO_INCREMENT,
