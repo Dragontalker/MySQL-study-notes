@@ -22,3 +22,9 @@ ORDER BY salary;
 SELECT *
 FROM employees
 ORDER BY salary DESC;
+
+#案例3: 查询部门编号>=90的员工信息, 按入职时间的先后进行排序
+SELECT *
+FROM employees
+WHERE department_id >= 90
+ORDER BY hiredate;
