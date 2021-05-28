@@ -10,3 +10,7 @@ WHERE job_id <> 'IT' OR salary = 12000;
 
 #3. 查看部门departments表的结构, 查询结果如下
 DESC departments;
+
+#4. 查询部门departments表中涉及到了哪些位置编号
+SELECT DISTINCT location_id
+FROM departments;
