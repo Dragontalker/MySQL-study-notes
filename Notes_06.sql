@@ -38,3 +38,6 @@ SELECT LOWER('JOHN');
 #示例: 将姓大写, 将名小写, 然后拼接
 SELECT CONCAT(UPPER(last_name), LOWER(first_name)) AS full_name
 FROM employees;
+
+#4. substr(), substring()
+SELECT SUBSTR('李莫愁爱上了陆展元', 7);
