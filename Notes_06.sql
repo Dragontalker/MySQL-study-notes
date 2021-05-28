@@ -30,3 +30,11 @@ SHOW VARIABLES LIKE '%CHAR%';
 #2. concat() 拼接字符串
 SELECT CONCAT(last_name, '_', first_name) AS full_name
 FROM employees;
+
+#3. upper(), lower()
+SELECT UPPER('john');
+SELECT LOWER('JOHN');
+
+#示例: 将姓大写, 将名小写, 然后拼接
+SELECT CONCAT(UPPER(last_name), LOWER(first_name)) AS full_name
+FROM employees;
