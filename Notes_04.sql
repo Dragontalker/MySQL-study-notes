@@ -33,3 +33,8 @@ ORDER BY hiredate;
 SELECT *, salary*12*(1+ifnull(commission_pct, 0)) AS annual_salary
 FROM employees
 ORDER BY annual_salary;
+
+#案例5: 按姓名的长度显示员工的姓名和工资[按函数排序]
+SELECT LENGTH(last_name) name_length, last_name, salary
+FROM employees
+ORDER BY name_length;
