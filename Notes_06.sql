@@ -22,5 +22,8 @@
 
 #一、 字符函数
 
-#length()
-SELECT LENGTH('john');
+#1. length() 获取参数值的字节个数
+SELECT LENGTH('张三分hahaha');
+
+SHOW VARIABLES LIKE '%CHAR%';
+
