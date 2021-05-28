@@ -38,3 +38,8 @@ ORDER BY annual_salary;
 SELECT LENGTH(last_name) name_length, last_name, salary
 FROM employees
 ORDER BY name_length;
+
+#案例6: 查询员工信息, 要求先按工资排序, 再按员工编号排序[按多个字段排序]
+SELECT *
+FROM employees
+ORDER BY salary ASC, employee_id DESC;
