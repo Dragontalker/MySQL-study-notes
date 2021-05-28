@@ -14,3 +14,11 @@ DESC departments;
 #4. 查询部门departments表中涉及到了哪些位置编号
 SELECT DISTINCT location_id
 FROM departments;
+
+#5. 经典面试题
+#试问： SELECT * FROM employees; 和 
+#SELECT * FROM employees WHERE commission_pct LIKE '%%' AND last_name like '%%';
+#结果是否一样? 并说明原因
+
+#答案: 不一样! 如果判断的字段有null值
+#如果用OR并有足够多的变量就一样了
