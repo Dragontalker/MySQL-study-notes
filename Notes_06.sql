@@ -27,3 +27,6 @@ SELECT LENGTH('张三分hahaha');
 
 SHOW VARIABLES LIKE '%CHAR%';
 
+#2. concat() 拼接字符串
+SELECT CONCAT(last_name, '_', first_name) AS full_name
+FROM employees;
