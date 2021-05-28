@@ -23,8 +23,13 @@ SELECT *
 FROM employees
 ORDER BY salary DESC;
 
-#案例3: 查询部门编号>=90的员工信息, 按入职时间的先后进行排序
+#案例3: 查询部门编号>=90的员工信息, 按入职时间的先后进行排序[添加筛选条件]
 SELECT *
 FROM employees
 WHERE department_id >= 90
 ORDER BY hiredate;
+
+#案例4: 按年薪的高低显示员工的信息和年薪[按表达式排序]
+SELECT *, salary*12*(1+ifnull(commission_pct, 0)) AS annual_salary
+FROM employees
+ORDER BY annual_salary;
