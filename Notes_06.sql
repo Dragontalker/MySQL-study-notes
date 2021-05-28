@@ -40,4 +40,8 @@ SELECT CONCAT(UPPER(last_name), LOWER(first_name)) AS full_name
 FROM employees;
 
 #4. substr(), substring()
+#注意: 索引从1开始
+#截取指定处后面所有字符
 SELECT SUBSTR('李莫愁爱上了陆展元', 7);
+#截取从指定索引处指定字符长度的字符
+SELECT SUBSTR('李莫愁爱上了陆展元', 1, 3);
