@@ -61,3 +61,8 @@ SELECT TRIM('aa' from 'aaaaaaaaaaa张aaaa翠aaaa山aaaaaaaaaa') AS out_out;
 
 #7. lpad: 用指定的字符实现左填充指定长度
 SELECT LPAD('殷素素', 10, '*') AS out_put;
+SELECT LPAD('殷素素', 2, '*') AS out_put;
+
+#8. rpad: 用指定的字符实现右填充指定长度
+SELECT RPAD('殷素素', 10, '*') AS out_put;
+SELECT RPAD('殷素素', 2, '*') AS out_put;
