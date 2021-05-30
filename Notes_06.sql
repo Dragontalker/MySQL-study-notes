@@ -56,5 +56,8 @@ SELECT INSTR('杨不悔爱上了殷六侠', '殷八侠') AS out_put;
 
 #6. trim
 
-SELECT LENGTH(TRIM('   张翠山    ')) AS out_put;
-SELECT LENGTH(TRIM('a' from 'aaaaaaaaaa张aaaa翠aaaa山aaaaaaaaaa')) AS out_out;
+SELECT TRIM('   张翠山    ') AS out_put;
+SELECT TRIM('aa' from 'aaaaaaaaaaa张aaaa翠aaaa山aaaaaaaaaa') AS out_out;
+
+#7. lpad: 用指定的字符实现左填充指定长度
+SELECT LPAD('殷素素', 10, '*') AS out_put;
