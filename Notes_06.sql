@@ -69,3 +69,8 @@ SELECT RPAD('殷素素', 2, '*') AS out_put;
 
 #9. replace 替换
 SELECT REPLACE('张无忌爱上了周芷若', '周芷若', '赵敏') AS out_put;
+
+#二、数学函数
+
+#1. round 四舍五入
+SELECT ROUND(1.45);
