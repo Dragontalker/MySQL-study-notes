@@ -75,3 +75,6 @@ SELECT REPLACE('张无忌爱上了周芷若', '周芷若', '赵敏') AS out_put;
 #1. round 四舍五入
 SELECT ROUND(1.45);
 SELECT ROUND(1.567, 2);
+
+#2. ceil 向上取整
+SELECT CEIL(1.52);
