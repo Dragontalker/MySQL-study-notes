@@ -81,3 +81,6 @@ SELECT CEIL(1.52);
 
 #3. floor 向下取整 返回<=该参数的最大整数
 SELECT FLOOR(-9.99);
+
+#4. truncate 截断
+SELECT TRUNCATE(1.65, 1);
