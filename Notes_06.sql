@@ -84,3 +84,12 @@ SELECT FLOOR(-9.99);
 
 #4. truncate 截断
 SELECT TRUNCATE(1.65, 1);
+
+#5. mod 取余
+/*
+MOD(a, b): a-a/b*b
+
+MOD(-10, 3) = -10 - (-10)/(-3) * (-3) = -1
+*/
+SELECT MOD(10, 3);
+SELECT 10%3;
