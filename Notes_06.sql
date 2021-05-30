@@ -76,5 +76,8 @@ SELECT REPLACE('张无忌爱上了周芷若', '周芷若', '赵敏') AS out_put;
 SELECT ROUND(1.45);
 SELECT ROUND(1.567, 2);
 
-#2. ceil 向上取整
+#2. ceil 向上取整 返回>=该参数的最小整数
 SELECT CEIL(1.52);
+
+#3. floor 向下取整 返回<=该参数的最大整数
+SELECT FLOOR(-9.99);
