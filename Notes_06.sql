@@ -66,3 +66,6 @@ SELECT LPAD('殷素素', 2, '*') AS out_put;
 #8. rpad: 用指定的字符实现右填充指定长度
 SELECT RPAD('殷素素', 10, '*') AS out_put;
 SELECT RPAD('殷素素', 2, '*') AS out_put;
+
+#9. replace 替换
+SELECT REPLACE('张无忌爱上了周芷若', '周芷若', '赵敏') AS out_put;
