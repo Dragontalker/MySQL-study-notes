@@ -53,3 +53,8 @@ FROM employees;
 #5. instr: 返回字串第一次出现的索引, 如果找不到返回0
 
 SELECT INSTR('杨不悔爱上了殷六侠', '殷八侠') AS out_put;
+
+#6. trim
+
+SELECT LENGTH(TRIM('   张翠山    ')) AS out_put;
+SELECT LENGTH(TRIM('a' from 'aaaaaaaaaa张aaaa翠aaaa山aaaaaaaaaa')) AS out_out;
