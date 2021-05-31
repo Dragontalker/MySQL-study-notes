@@ -142,3 +142,6 @@ select user();
 #1. if函数: if else的效果
 select if(10>5, 'big', 'small') as out_put;
 
+select last_name, commission_pct, if(commission_pct is null, '没奖金, 呵呵', '有奖金, 嘻嘻') as out_put
+from employees;
+
