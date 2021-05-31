@@ -126,3 +126,8 @@ where hiredate = str_to_date('4-3 1992', '%c-%d %Y');
 
 #7. date_format 将日期转换成字符
 select date_format(now(), '%Y年%m月%d日') as out_put;
+
+#查询有奖金的员工名和入职日期(xx月/xx日 xx年)
+select last_name, date_format(hiredate, '%m月/%d日 %y年') as format_date
+from employees
+where commission_pct is not null;
