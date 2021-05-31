@@ -31,6 +31,15 @@
         lpad
         rpad
         replace
+	
+    数学函数:
+		round
+        ceil
+        floor
+        truncate
+        mod
+        
+	
 */
 
 #一、 字符函数
