@@ -158,5 +158,13 @@ Java中：
 			语句n:
 			break;
 	}
+    
+MySQL中:
+	case 要判断的字段或表达式
+    when 常量1 then 要显示的值1或语句1;
+    when 常量2 then 要显示的值2或语句2;
+    ...
+    else 要显示的值n或语句n;
+    end
 */
 
