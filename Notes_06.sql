@@ -18,6 +18,19 @@
 	1. 单行函数, 如 CONCAT(), LENGTH(), IFNULL()
     2. 分组函数, 
 		功能: 做统计使用, 又称为统计函数、聚合函数、组函数
+        
+常见函数:
+	字符函数:
+		length
+        concat
+        substr
+        instr
+        trim
+        upper
+        lower
+        lpad
+        rpad
+        replace
 */
 
 #一、 字符函数
