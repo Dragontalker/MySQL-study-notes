@@ -115,3 +115,6 @@ FROM employees;
 #5. month, monthname
 select month(now());
 select monthname(now());
+
+#6. str_to_date 将字符通过指定的格式转换成日期
+select str_to_date('1998-3-2', '%Y-%c-%d') as out_put;
