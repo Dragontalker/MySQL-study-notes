@@ -111,3 +111,7 @@ SELECT YEAR('1998-1-1');
 
 SELECT YEAR(hiredate) AS hire_year
 FROM employees;
+
+#5. month, monthname
+select month(now());
+select monthname(now());
