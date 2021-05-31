@@ -98,3 +98,13 @@ SELECT 10%3;
 
 #1. now 返回当前系统日期+时间
 SELECT NOW();
+
+#2. curdate 返回当前系统日期, 不包含时间
+SELECT CURDATE();
+
+#3. curtime 返回当前时间, 不包含日期
+SELECT CURTIME();
+
+#4. year 可以获取指定的部分, 年、月、日、小时、分钟、秒
+SELECT YEAR(NOW());
+SELECT YEAR('1998-1-1');
