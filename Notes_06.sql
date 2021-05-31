@@ -199,4 +199,12 @@ Java中:
     } else {
 		语句n
 	}
+    
+MySQL中:
+
+case 
+when 条件1 then 要显示的值1或语句1
+when 条件2 then 要显示的值2或语句2
+...
+else 要显示的值n或语句n
 */
