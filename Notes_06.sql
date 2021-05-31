@@ -39,7 +39,19 @@
         truncate
         mod
         
-	
+	日期函数:
+		now
+        curdate
+        curtime
+        year
+        month
+        monthname
+        day
+        hour
+        minute
+        second
+        str_to_date
+        date_format
 */
 
 #一、 字符函数
