@@ -215,3 +215,11 @@ else 要显示的值n或语句n
 #如果工资大于10000, 显示C级别
 #否则, 显示D级别
 
+select salary,
+case
+when salary>20000 then 'A'
+when salary>15000 then 'B'
+when salary>10000 then 'C'
+else 'D'
+end as salary_rank
+from employees;
