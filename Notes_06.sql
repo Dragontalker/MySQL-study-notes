@@ -108,3 +108,6 @@ SELECT CURTIME();
 #4. year 可以获取指定的部分, 年、月、日、小时、分钟、秒
 SELECT YEAR(NOW());
 SELECT YEAR('1998-1-1');
+
+SELECT YEAR(hiredate) AS hire_year
+FROM employees;
