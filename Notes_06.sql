@@ -136,3 +136,9 @@ where commission_pct is not null;
 select version();
 select datebase();
 select user();
+
+#五、流程控制函数
+
+#1. if函数: if else的效果
+select if(10>5, 'big', 'small') as out_put;
+
