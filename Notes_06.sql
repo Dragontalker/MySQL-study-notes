@@ -118,3 +118,9 @@ select monthname(now());
 
 #6. str_to_date 将字符通过指定的格式转换成日期
 select str_to_date('1998-3-2', '%Y-%c-%d') as out_put;
+
+#查询入职日期为1992-04-03的员工信息
+select *
+from employees
+where hiredate = str_to_date('4-3 1992', '%c-%d %Y');
+
