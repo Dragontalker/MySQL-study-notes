@@ -186,3 +186,17 @@ else salary
 end as new_salary
 
 from employees;
+
+#3. case函数的使用二: 类似多重if
+
+/*
+Java中:
+	if(条件1） {
+		语句1
+	} else if (条件2) {
+		语句2
+    } ... {
+    } else {
+		语句n
+	}
+*/
