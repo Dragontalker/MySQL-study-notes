@@ -52,6 +52,14 @@
         second
         str_to_date
         date_format
+        
+	其他函数:
+		version
+        database
+        
+	控制函数:
+		if
+        case
 */
 
 #一、 字符函数
