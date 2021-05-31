@@ -176,3 +176,13 @@ MySQL中:
 部门号=50, 显示的工资为1.3倍
 */
 
+select salary as original_salary, department_id,
+
+case department_id
+when 30 then salary*1.1
+when 40 then salary*1.2
+when 50 then salary*1.3
+else salary
+end as new_salary
+
+from employees;
