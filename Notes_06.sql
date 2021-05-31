@@ -145,3 +145,18 @@ select if(10>5, 'big', 'small') as out_put;
 select last_name, commission_pct, if(commission_pct is null, '没奖金, 呵呵', '有奖金, 嘻嘻') as out_put
 from employees;
 
+#2. case函数的使用一: switch case的效果
+
+/*
+Java中：
+	switch(变量或表达式) {
+		case 常量1： 
+			语句1： 
+			break;
+		...
+		default:
+			语句n:
+			break;
+	}
+*/
+
