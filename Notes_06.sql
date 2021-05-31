@@ -124,3 +124,5 @@ select *
 from employees
 where hiredate = str_to_date('4-3 1992', '%c-%d %Y');
 
+#7. date_format 将日期转换成字符
+select date_format(now(), '%Y年%m月%d日') as out_put;
