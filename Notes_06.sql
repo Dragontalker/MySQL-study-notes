@@ -131,3 +131,8 @@ select date_format(now(), '%Y年%m月%d日') as out_put;
 select last_name, date_format(hiredate, '%m月/%d日 %y年') as format_date
 from employees
 where commission_pct is not null;
+
+#四、其他函数
+select version();
+select datebase();
+select user();
