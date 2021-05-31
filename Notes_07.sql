@@ -2,6 +2,8 @@
 select now();
 
 #2. 查询员工号、姓名、工资, 以及工资提高百分之20%之后的结果(new salary)
+select employee_id, last_name, salary, salary*1.2 as 'new salary'
+from employees;
 
 #3. 将员工的姓名按首字母排序, 并写出姓名的长度
 
