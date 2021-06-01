@@ -49,3 +49,8 @@ FROM employees
 GROUP BY department_id;
 
 #2. 根据1.的结果进行筛选, 查询哪个员工的个数>2
+SELECT COUNT(*), department_id
+FROM employees
+GROUP BY department_id
+HAVING COUNT(*) > 2;
+
