@@ -14,6 +14,9 @@ order by first_letter;
 #<last_name> earsn <salary> monthly but wants <salary*3>
 #Dream salary
 #King earns 24000 monthly but wants 72000
+SELECT concat(last_name, ' earns ', salary, ' monethly but wants ', salary*3) AS "Dream Salary"
+FROM employees
+WHERE salary=24000;
 
 #5. 使用case-when, 按照下面的条件:
 #	job		grade
