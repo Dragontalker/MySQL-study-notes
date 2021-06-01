@@ -67,3 +67,16 @@ FROM employees
 WHERE commission_pct IS NOT NULL
 GROUP BY job_id
 HAVING MAX(salary) > 12000;
+
+#案例3: 查询领导编号>102的每个领导手下的最低工资>5000的领导编号是哪个, 以及其最低工资
+#1. 查询领导编号>102的每个领导手下的最低工资
+SELECT MIN(salary), manager_id
+FROM employees
+WHERE manager_id IS NOT NULL
+GROUP BY manager_id;
+
+#2. 添加筛选条件: 编号>102
+SELECT MIN(salary), manager_id
+FROM employees
+WHERE manager_id > 102
+GROUP BY manager_id;
