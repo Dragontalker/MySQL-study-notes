@@ -12,3 +12,6 @@ SELECT DATEDIFF(MAX(hiredate), MIN(hiredate)) AS difference
 FROM employees;
 
 #3. 查询部门编号为90的员工个数
+SELECT COUNT(*)
+FROM employees
+WHERE department_id = 90;
