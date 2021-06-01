@@ -5,7 +5,10 @@ select now();
 select employee_id, last_name, salary, salary*1.2 as 'new salary'
 from employees;
 
-#3. 将员工的姓名按首字母排序, 并写出姓名的长度
+#3. 将员工的姓名按首字母排序, 并写出姓名的长度 (length)
+select length(last_name) as name_length, substr(last_name, 1, 1) as first_letter, last_name
+from employees
+order by first_letter;
 
 #4. 做一个查询, 产生下面的结果
 #<last_name> earsn <salary> monthly but wants <salary*3>
