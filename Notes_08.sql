@@ -19,3 +19,7 @@ SELECT
     MIN(salary) AS minimum,
     COUNT(salary) AS count
 FROM employees;
+
+#2. 参数支持哪些类型
+SELECT SUM(last_name), AVG(last_name) FROM employees;
+SELECT SUM(hiredate), AVG(hiredate) FROM employees;
