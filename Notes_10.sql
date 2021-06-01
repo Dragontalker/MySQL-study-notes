@@ -39,3 +39,13 @@ SELECT MAX(salary), manager_id
 FROM employees
 WHERE commission_pct IS NOT NULL
 GROUP BY manager_id;
+
+#添加复杂的筛选条件
+
+#案例1: 查询哪个部门的员工个数大于2
+#1. 查询每个员工的员工个数
+SELECT COUNT(*), department_id
+FROM employees
+GROUP BY department_id;
+
+#2. 根据1.的结果进行筛选, 查询哪个员工的个数>2
