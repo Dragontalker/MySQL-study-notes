@@ -36,4 +36,9 @@ SELECT COUNT(last_name), COUNT(hiredate), COUNT(commission_pct)
 FROM employees;
 
 #3. 忽略null
-SELECT SUM(commission_pct), AVG(commission_pct) FROM employees;
+SELECT 
+	SUM(commission_pct) AS sum, 
+    AVG(commission_pct), 
+    SUM(commission_pct)/35, 
+    SUM(commission_pct)/107 
+FROM employees;
