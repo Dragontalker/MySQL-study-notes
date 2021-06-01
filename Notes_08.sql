@@ -51,3 +51,4 @@ SELECT COUNT(commission_pct) FROM employees;
 
 #4. 和distinct搭配
 SELECT SUM(DISTINCT salary), SUM(salary) FROM employees;
+SELECT COUNT(DISTINCT salary), COUNT(salary) FROM employees;
