@@ -80,3 +80,10 @@ SELECT MIN(salary), manager_id
 FROM employees
 WHERE manager_id > 102
 GROUP BY manager_id;
+
+#3. 最低工资大于5000
+SELECT MIN(salary), manager_id
+FROM employees
+WHERE manager_id > 102
+GROUP BY manager_id
+HAVING MIN(salary) > 5000;
