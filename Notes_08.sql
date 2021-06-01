@@ -4,6 +4,11 @@
 
 分类:
 sum求和, avg平均值, max最大值, min最小值, count计算个数
+
+特点:
+1. sum, avg一般用于处理数值型
+   max, min, count可以处理任何类型
+2. 是否忽略null值
 */
 
 #1. 简单的使用
@@ -27,4 +32,5 @@ SELECT SUM(hiredate), AVG(hiredate) FROM employees;
 SELECT MAX(last_name), MIN(last_name) FROM employees;
 SELECT MAX(hiredate), MIN(hiredate) FROM employees;
 
-SELECT COUNT(last_name), COUNT(hiredate) FROM employees;
+SELECT COUNT(last_name), COUNT(hiredate), COUNT(commission_pct) 
+FROM employees;
