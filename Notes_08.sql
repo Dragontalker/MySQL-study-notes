@@ -42,3 +42,8 @@ SELECT
     SUM(commission_pct)/35, 
     SUM(commission_pct)/107 
 FROM employees;
+
+SELECT MAX(commission_pct), MIN(commission_pct)
+FROM employees;
+
+SELECT COUNT(commission_pct) FROM employees;
