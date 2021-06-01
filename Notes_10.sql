@@ -106,7 +106,7 @@ FROM employees
 GROUP BY LENGTH(last_name);
 
 #2. 添加筛选条件
-SELECT COUNT(*), LENGTH(last_name) AS len_name
+SELECT COUNT(*) AS c, LENGTH(last_name) AS len_name
 FROM employees
-GROUP BY LENGTH(last_name)
-HAVING COUNT(*) > 5;
+GROUP BY len_name
+HAVING c > 5;
