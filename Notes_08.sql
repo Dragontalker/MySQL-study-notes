@@ -9,6 +9,7 @@ sum求和, avg平均值, max最大值, min最小值, count计算个数
 1. sum, avg一般用于处理数值型
    max, min, count可以处理任何类型
 2. 是否忽略null值
+3. 可以和distinct搭配实现去重的运算
 */
 
 #1. 简单的使用
@@ -47,3 +48,6 @@ SELECT MAX(commission_pct), MIN(commission_pct)
 FROM employees;
 
 SELECT COUNT(commission_pct) FROM employees;
+
+#4. 和distinct搭配
+SELECT SUM(DISTINCT salary), SUM(salary) FROM employees;
