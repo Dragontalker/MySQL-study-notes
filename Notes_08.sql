@@ -34,3 +34,6 @@ SELECT MAX(hiredate), MIN(hiredate) FROM employees;
 
 SELECT COUNT(last_name), COUNT(hiredate), COUNT(commission_pct) 
 FROM employees;
+
+#3. 忽略null
+SELECT SUM(commission_pct), AVG(commission_pct) FROM employees;
