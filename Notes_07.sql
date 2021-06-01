@@ -23,3 +23,14 @@ WHERE salary=24000;
 #	AD_PRES	  A
 #	ST_MAN	  B
 #	IT_PROG	  C
+#   SA_REP	  D
+#	ST_CLERK  E
+SELECT last_name, job_id AS job, 
+CASE job_id
+WHEN 'AD_PRES' THEN 'A'
+WHEN 'ST_MAN' THEN 'B'
+WHEN 'IT_PROG' THEN 'C'
+WHEN 'SA_REP' THEN 'D'
+WHEN 'ST_CLERK' THEN 'E'
+END AS Grade
+FROM employees;
