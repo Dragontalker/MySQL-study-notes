@@ -15,6 +15,8 @@ sum求和, avg平均值, max最大值, min最小值, count计算个数
 
 4. count函数的单独介绍
 	- 一般使用count(*)统计行数
+    
+5. 和分组函数一同查询的字段要求是group by后的字段, 其他不可以
 */
 
 #1. 简单的使用
@@ -70,3 +72,6 @@ SELECT COUNT('大侠') FROM employees;
 #效率:
 #5.0之前, MYISAM存储引擎下, COUNT(*)的效率高
 #5.0之后, INNODB存储引擎下, COUNT(*)和COUNT(1)的效率差不多, 比COUNT(字段)要高一些
+
+#6. 和分组函数一同查询的字段有限制
+SELECT AVG(salary), employee_id FROM employees;
