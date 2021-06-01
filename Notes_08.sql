@@ -62,3 +62,7 @@ SELECT COUNT(*) FROM employees;
 SELECT COUNT(1) FROM employees;
 SELECT COUNT(2) FROM employees;
 SELECT COUNT('大侠') FROM employees;
+
+#效率:
+#5.0之前, MYISAM存储引擎下, COUNT(*)的效率高
+#5.0之后, INNODB存储引擎下, COUNT(*)和COUNT(1)的效率差不多, 比COUNT(字段)要高一些
