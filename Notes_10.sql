@@ -15,3 +15,9 @@
 SELECT department_id, ROUND(AVG(salary), 2)
 FROM employees
 GROUP BY department_id;
+
+#案例1: 查询每个工种的最高工资
+SELECT job_id, MAX(salary) AS max_salary
+FROM employees
+GROUP BY job_id
+ORDER BY max_salary DESC;
