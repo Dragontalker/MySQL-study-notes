@@ -61,3 +61,9 @@ FROM employees
 WHERE commission_pct IS NOT NULL
 GROUP BY job_id;
 
+#2. 根据1.的结果继续筛选, 最高工资>12000
+SELECT MAX(salary), job_id
+FROM employees
+WHERE commission_pct IS NOT NULL
+GROUP BY job_id
+HAVING MAX(salary) > 12000;
