@@ -21,3 +21,8 @@ SELECT job_id, MAX(salary) AS max_salary
 FROM employees
 GROUP BY job_id
 ORDER BY max_salary DESC;
+
+#案例2: 查询每个位置上的部门个数
+SELECT department_id, COUNT(*)
+FROM departments
+GROUP BY location_id; 
