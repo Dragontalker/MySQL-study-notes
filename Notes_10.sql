@@ -26,3 +26,10 @@ ORDER BY max_salary DESC;
 SELECT department_id, COUNT(*)
 FROM departments
 GROUP BY location_id; 
+
+#添加筛选条件
+#案例1: 查询邮箱中包含a字符的, 每个部门的平均工资
+SELECT department_id, AVG(salary)
+FROM employees
+WHERE email like '%a%'
+GROUP BY department_id; 
