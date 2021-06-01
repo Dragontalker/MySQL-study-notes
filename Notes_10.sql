@@ -33,3 +33,9 @@ SELECT department_id, AVG(salary)
 FROM employees
 WHERE email like '%a%'
 GROUP BY department_id; 
+
+#案例2: 查询有奖金的每个领导手下员工的最高工资
+SELECT MAX(salary), manager_id
+FROM employees
+WHERE commission_pct IS NOT NULL
+GROUP BY manager_id;
