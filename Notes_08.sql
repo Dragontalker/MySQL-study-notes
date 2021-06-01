@@ -56,4 +56,9 @@ SELECT COUNT(DISTINCT salary), COUNT(salary) FROM employees;
 
 #5. count函数的详细介绍
 SELECT COUNT(salary) FROM employees;
+
+#用来统计表格的行数
 SELECT COUNT(*) FROM employees;
+SELECT COUNT(1) FROM employees;
+SELECT COUNT(2) FROM employees;
+SELECT COUNT('大侠') FROM employees;
