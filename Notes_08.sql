@@ -9,3 +9,12 @@ sum求和, avg平均值, max最大值, min最小值, count计算个数
 #1. 简单的使用
 SELECT SUM(salary)
 FROM employees;
+
+SELECT MAX(salary)
+FROM employees;
+
+SELECT MIN(salary)
+FROM employees;
+
+SELECT COUNT(salary)
+FROM employees;
