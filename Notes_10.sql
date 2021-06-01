@@ -97,3 +97,16 @@ FROM employees
 WHERE manager_id > 102
 GROUP BY manager_id
 HAVING MIN(salary) > 5000;
+
+#按表达式或函数分组
+#案例: 按员工姓名的长度分组, 查询每一组的员工个数, 筛选员工个数>5的有哪些
+#1. 查询每个长度的员工个数
+SELECT COUNT(*), LENGTH(last_name) AS len_name
+FROM employees
+GROUP BY LENGTH(last_name);
+
+#2. 添加筛选条件
+SELECT COUNT(*), LENGTH(last_name) AS len_name
+FROM employees
+GROUP BY LENGTH(last_name)
+HAVING COUNT(*) > 5;
