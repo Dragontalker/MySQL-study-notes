@@ -54,3 +54,10 @@ FROM employees
 GROUP BY department_id
 HAVING COUNT(*) > 2;
 
+#案例2: 查询每个工种有奖金的员工的最高工资>12000的工种编号和最高工资
+#1. 查询每个工种有奖金的员工的最高工资
+SELECT MAX(salary), job_id
+FROM employees
+WHERE commission_pct IS NOT NULL
+GROUP BY job_id;
+
