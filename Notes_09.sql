@@ -8,5 +8,7 @@ FROM
 	employees;
 
 #2. 查询员工表中的最大入职时间和最下入职时间的相差天数 (DIFFERENCE)
+SELECT DATEDIFF(MAX(hiredate), MIN(hiredate)) AS difference
+FROM employees;
 
 #3. 查询部门编号为90的员工个数
