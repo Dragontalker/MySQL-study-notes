@@ -10,6 +10,7 @@ sum求和, avg平均值, max最大值, min最小值, count计算个数
    max, min, count可以处理任何类型
 2. 是否忽略null值
 3. 可以和distinct搭配实现去重的运算
+4. count函数的单独介绍
 */
 
 #1. 简单的使用
@@ -52,3 +53,7 @@ SELECT COUNT(commission_pct) FROM employees;
 #4. 和distinct搭配
 SELECT SUM(DISTINCT salary), SUM(salary) FROM employees;
 SELECT COUNT(DISTINCT salary), COUNT(salary) FROM employees;
+
+#5. count函数的详细介绍
+SELECT COUNT(salary) FROM employees;
+SELECT COUNT(*) FROM employees;
