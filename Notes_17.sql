@@ -86,4 +86,10 @@ WHERE job_id = (
 SELECT MIN(salary)
 FROM employees;
 
-
+#(2)查询last_name, job_id和salary, 要求salary=(1)
+SELECT last_name, job_id, salary
+FROM employees
+WHERE salary = (
+	SELECT MIN(salary)
+	FROM employees
+);
