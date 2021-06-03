@@ -19,6 +19,10 @@
         (1)分组函数做条件肯定是放在having字句中
         (2)能用分组前筛选的, 就优先考虑使用分组前筛选(增强性能)
         
+	2. group by字句支持单个字段分组, 多个字段分组(多个字段之间用都好隔开没有顺序要求), 表达式函数
+    
+    3. 也可以添加排序
+        
 */
 
 #引入: 查询每个部门的平均工资
@@ -114,4 +118,3 @@ WHERE department_id IS NOT NULL
 GROUP BY job_id, department_id
 HAVING a > 10000
 ORDER BY a DESC;
-
