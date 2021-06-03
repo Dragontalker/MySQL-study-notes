@@ -80,3 +80,6 @@ VALUE('B', 3000, 5999);
 
 INSERT INTO job_grades
 VALUE('C', 6000, 9999);
+
+INSERT INTO job_grades
+VALUE('D', 15000, 24999);
