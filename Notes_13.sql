@@ -6,3 +6,8 @@ FROM employees;
 SELECT employee_id, job_id, last_name
 FROM employees
 ORDER BY department_id DESC, salary ASC;
+
+#3. 查询员工表中的job_id中包含a和e的, 并且a在e的前面
+SELECT job_id
+FROM employees
+WHERE job_id LIKE '%a%e%';
