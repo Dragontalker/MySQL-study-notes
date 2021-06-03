@@ -280,3 +280,12 @@ WHERE bo.id NOT IN(
 	SELECT boyfriend_id
     FROM beauty
 );
+
+#使用exists
+SELECT bo.*
+FROM boyds AS bo
+WHERE NOT EXISTS(
+	SELECT boyfriend_id
+    FROM beauty AS b
+    WHERE bo.id = b.boyfriend_id
+);
