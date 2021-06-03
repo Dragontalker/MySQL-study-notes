@@ -138,3 +138,12 @@ FROM beauty AS b
 LEFT OUTER JOIN boys AS bo
 ON b.boyfriend_id = bo.id
 WHERE bo.id IS NULL;
+
+#案例1： 查询哪个部门没有员工
+
+#左外:
+SELECT d.*, e.employee_id
+FROM departments AS d
+LEFT OUTER JOIN employees AS e
+ON d.department_id = e.department_id
+WHERE e.employee_id IS NULL;
