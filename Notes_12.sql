@@ -8,3 +8,5 @@
 如何避免: 添加有效的连接条件
 */
 
+SELECT NAME, boyName FROM boys, beauty
+WHERE beauty.boyfriend_id = boys.id;
