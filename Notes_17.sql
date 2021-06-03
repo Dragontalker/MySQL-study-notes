@@ -129,3 +129,12 @@ HAVING MIN(salary) > (
 	WHERE department_id = 50
 );
 */
+
+#2. 列子查询(多行子查询)
+
+#案例1： 返回location_id是1400或1700的部门中的所有员工姓名
+
+#(1)查询location_id是1400或1700的部门编号
+SELECT department_id
+FROM departments
+WHERE location_id IN(1400, 1700);
