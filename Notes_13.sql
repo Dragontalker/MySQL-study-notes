@@ -11,3 +11,12 @@ ORDER BY department_id DESC, salary ASC;
 SELECT job_id
 FROM employees
 WHERE job_id LIKE '%a%e%';
+
+#4. 已知表, 里面有id(学号), name, gradeId(年级编号)
+#已知表grade, 里面有id(年级编号), name(年纪名)
+#已知表result, 里面有id, score, studentNo(学号)
+#要求查询姓名、年级名、成绩
+SELECT s.name, g.name, r.score
+FROM student AS s, grade AS g, result as r
+WHERE s.id = r.studentNO
+AND g.id = s.gradeId;
