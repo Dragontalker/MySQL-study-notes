@@ -81,3 +81,11 @@ FROM departments AS d, employees AS e
 WHERE d.department_id = e.department_id
 AND commission_pct IS NOT NULL
 GROUP BY department_name, d.manager_id;
+
+#6. 可以加排序
+#案例: 查询每个工种的工种名和员工的个数, 并且按员工个数降序
+SELECT job_title, COUNT(*)
+FROM employees AS e, jobs AS j
+WHERE e.job_id = j.job_id
+GROUP BY job_title
+ORDER BY COUNT(*) DESC;
