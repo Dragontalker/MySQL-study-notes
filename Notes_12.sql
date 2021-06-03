@@ -96,3 +96,4 @@ SELECT last_name, department_name, city
 FROM employees AS e, departments AS d, locations AS l
 WHERE e.department_id = d.department_id
 AND d.location_id = l.location_id;
+AND city LIKE 's%';
