@@ -21,3 +21,8 @@ SELECT department_id, COUNT(*), AVG(salary) AS a
 FROM employees
 GROUP BY department_id
 ORDER BY a DESC;
+
+#5. 选择具有各个job_id的员工人数
+SELECT COUNT(*) count, job_id
+FROM employees
+GROUP BY job_id;
