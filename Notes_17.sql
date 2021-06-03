@@ -223,6 +223,9 @@ SELECT (
 ) AS dep_102;
 
 #三、from后面
+/*
+将子查询结果当成一张表, 必须起别名
+*/
 
 #案例: 查询每个部门的平均工资的工资等级
 
@@ -240,3 +243,15 @@ FROM (
 ) AS ag_dep
 INNER JOIN job_grades AS g
 ON ag_dep.ag BETWEEN lowest_sal AND highest_sal;
+
+#四、exists后面(相关子查询)
+
+/*
+语法:
+exists(完整的查询语句)
+
+结果:
+1或0
+*/
+
+SELECT EXISTS(SELECT employee_id FROM employees WHERE salary = 30000);
