@@ -205,11 +205,20 @@ WHERE (employee_id, salary) = (
 
 #二、select后面
 
-#案例: 查询每个部门的员工个数
+#案例1: 查询每个部门的员工个数
 SELECT d.*, (
 	SELECT COUNT(*) 
     FROM employees AS e
     WHERE e.department_id = d.department_id
 ) AS count 
 FROM departments AS d;
+
+#案例2: 查询员工号=102的部门名
+SELECT (
+	SELECT department_name
+    FROM departments AS d
+    INNER JOIN employees AS e
+    ON d.department_id = e.department_id
+    WHERE e.employee_id = 102
+) AS dep_102;
 
