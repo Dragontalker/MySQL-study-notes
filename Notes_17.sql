@@ -135,6 +135,15 @@ HAVING MIN(salary) > (
 #案例1： 返回location_id是1400或1700的部门中的所有员工姓名
 
 #(1)查询location_id是1400或1700的部门编号
-SELECT department_id
+SELECT DISTINCT department_id
 FROM departments
 WHERE location_id IN(1400, 1700);
+
+#(2)查询员工姓名, 要求部门号是(1)列表中的某一个
+SELECT last_name
+FROM employees
+WHERE department_id IN (
+	SELECT DISTINCT department_id
+	FROM departments
+	WHERE location_id IN(1400, 1700)
+);
