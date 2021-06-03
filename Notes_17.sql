@@ -66,3 +66,16 @@ WHERE employee_id = 141;
 SELECT salary
 FROM employees
 WHERE employee_id = 143;
+
+#(3)查询员工的姓名, job_id和工资, 要求job_id=(1)并且salary>(2)
+SELECT last_name, job_id, salary
+FROM employees
+WHERE job_id = (
+	SELECT job_id
+	FROM employees
+	WHERE employee_id = 141
+) AND salary > (
+	SELECT salary
+	FROM employees
+	WHERE employee_id = 143
+);
