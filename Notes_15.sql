@@ -101,3 +101,11 @@ ON e.salary BETWEEN g.lowest_sal AND g.highest_sal
 GROUP BY grade_level
 HAVING salary_count > 20
 ORDER BY grade_level DESC;
+
+#(三)自连接
+
+#查询员工的名字、上级的名字
+SELECT e.last_name, m.last_name
+FROM employees AS e
+JOIN employees AS m
+ON e.manager_id = m.employee_id;
