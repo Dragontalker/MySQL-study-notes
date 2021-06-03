@@ -13,3 +13,9 @@ WHERE department_id = (
     FROM employees
     WHERE last_name = 'Zlotkey'
 );
+
+#2. 查询工资比公司平均工资高的员工的员工号, 姓名和工资
+
+#(1)查询平均工资
+SELECT AVG(salary)
+FROM employees;
