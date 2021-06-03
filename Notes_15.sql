@@ -43,9 +43,18 @@ ON e.job_id = j.job_id
 WHERE e.last_name LIKE '%e%';
 
 #案例3: 查询部门个数>3的城市名和部门个数(添加分组+筛选)
+#(1)查询每个城市的部门个数
+#(2)在(1)的结果上进行筛选
 SELECT city, COUNT(*) AS department_count
 FROM departments AS d
 INNER JOIN locations AS l
 ON d.location_id = l.location_id
 GROUP BY city
 HAVING department_count > 3;
+
+#案例4: 查询哪个部门的员工个数>3的部门名和员工个数, 并按个数降序(添加排序)
+
+#(1)查询每个部门的员工个数
+SELECT COUNT(*) as employee_count, department_id
+FROM employees
+GROUP BY department_id;
