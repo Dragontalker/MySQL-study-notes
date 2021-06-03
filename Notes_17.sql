@@ -147,3 +147,10 @@ WHERE department_id IN (
 	FROM departments
 	WHERE location_id IN(1400, 1700)
 );
+
+#案例2: 返回其他部门中比job_id为'IT_PROG'部门任一工资低的员工的员工号, 姓名, job_id, 以及salary
+
+#(1)查询job_id为'IT_PROG'部门任一工资
+SELECT DISTINCT salary
+FROM employees
+WHERE job_id = 'IT_PROG';
