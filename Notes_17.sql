@@ -148,9 +148,18 @@ WHERE department_id IN (
 	WHERE location_id IN(1400, 1700)
 );
 
-#案例2: 返回其他部门中比job_id为'IT_PROG'部门任一工资低的员工的员工号, 姓名, job_id, 以及salary
+#案例2: 返回其他部门中比job_id为'IT_PROG'工种任一工资低的员工的员工号, 姓名, job_id, 以及salary
 
 #(1)查询job_id为'IT_PROG'部门任一工资
 SELECT DISTINCT salary
 FROM employees
 WHERE job_id = 'IT_PROG';
+
+#(2)查询员工号, 姓名, job_id以及salary, salary < (1)的任意一个
+SELECT last_name, employee_id, job_id, salary
+FROM employees
+WHERE salary < ANY (
+	SELECT DISTINCT salary
+	FROM employees
+	WHERE job_id = 'IT_PROG'
+) AND job_id <> 'IT_PROG';
