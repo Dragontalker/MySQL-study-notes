@@ -28,5 +28,11 @@
 #1. 等值连接
 
 #案例1： 查询女神名和对应的男生名
-SELECT NAME, boyName FROM boys, beauty
+SELECT NAME, boyName 
+FROM boys, beauty
 WHERE beauty.boyfriend_id = boys.id;
+
+#案例2: 查询员工名和对应的部门名
+SELECT last_name, department_name
+FROM employees, departments
+WHERE employees.department_id = departments.department_id;
