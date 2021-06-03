@@ -105,3 +105,13 @@ WHERE department_id = 50;
 SELECT MIN(salary), department_id
 FROM employees
 GROUP BY department_id;
+
+#(3) 在(2)基础啊上筛选, 满足min(salary)>(1)
+SELECT MIN(salary), department_id
+FROM employees
+GROUP BY department_id
+HAVING MIN(salary) > (
+	SELECT MIN(salary)
+	FROM employees
+	WHERE department_id = 50
+);
