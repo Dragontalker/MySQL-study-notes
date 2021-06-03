@@ -56,3 +56,9 @@ WHERE salary > (
 	WHERE last_name = 'Abel'
 );
 
+#案例2: 返回job_id与141号员工相同, salary比143号员工多的员工姓名, job_id和工资
+#(1)查询141号员工的job_id
+SELECT job_id
+FROM employees
+WHERE employee_id = 141;
+
