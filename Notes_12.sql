@@ -36,3 +36,9 @@ WHERE beauty.boyfriend_id = boys.id;
 SELECT last_name, department_name
 FROM employees, departments
 WHERE employees.department_id = departments.department_id;
+
+#2. 
+#查询工种号、工种名、员工名
+SELECT last_name, employees.job_id, job_title
+FROM employees, jobs
+WHERE employees.job_id = jobs.job_id;
