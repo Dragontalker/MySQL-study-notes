@@ -173,3 +173,11 @@ WHERE salary < ALL (
 	WHERE job_id = 'IT_PROG'
 ) AND job_id <> 'IT_PROG';
 
+#3. 行子查询(结果集一行多列或多行多列)
+
+#案例: 查询员工编号最小并且工资最高的员工信息
+
+#(1)查询最小的员工编号
+SELECT MIN(employee_id)
+FROM employees;
+
