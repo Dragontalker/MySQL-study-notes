@@ -29,6 +29,7 @@ ON 连接条件
 特点:
 (1)添加排序、分组、筛选
 (2)inner可以省略
+(3)筛选条件放在where后面, 连接条件放在on后面, 提高分离性, 便于阅读
 */
 
 #1. 等值连接
@@ -82,3 +83,12 @@ ON e.department_id = d.department_id
 INNER JOIN jobs AS j
 ON e.job_id = j.job_id
 ORDER BY department_name DESC;
+
+#(二) 非等值连接
+
+#查询员工的工资级别
+
+SELECT salary, grade_level
+FROM employees AS e
+	JOIN job_grades AS g
+	ON e.salary BETWEEN g.lowest_sal AND g.highest_sal;
