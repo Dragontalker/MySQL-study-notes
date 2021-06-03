@@ -17,3 +17,12 @@
     全外: full [outer]
 交叉连接: cross
 */
+
+#一、 内连接
+/*
+语法：、
+SELECT 查询列表
+FROM 表1 别名
+INNER JOIN 表2 别名
+ON 连接条件
+*/
