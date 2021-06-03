@@ -25,6 +25,10 @@ SELECT 查询列表
 FROM 表1 别名
 INNER JOIN 表2 别名
 ON 连接条件
+
+特点:
+(1)添加排序、分组、筛选
+(2)inner可以省略
 */
 
 #1. 等值连接
@@ -70,7 +74,7 @@ GROUP BY department_name
 HAVING employee_count > 3
 ORDER BY employee_count DESC;
 
-#5. 查询员工名, 部门名, 工种名, 并按部门名降序()
+#5. 查询员工名, 部门名, 工种名, 并按部门名降序(添加三表连接)
 SELECT last_name, department_name, job_title
 FROM employees AS e
 INNER JOIN departments AS d
