@@ -26,3 +26,11 @@ FROM 表1 别名
 INNER JOIN 表2 别名
 ON 连接条件
 */
+
+#1. 等值连接
+
+#案例1： 查询员工名, 部门名
+SELECT last_name, department_name
+FROM employees AS e
+INNER JOIN departments AS d
+ON e.department_id = d.department_id;
