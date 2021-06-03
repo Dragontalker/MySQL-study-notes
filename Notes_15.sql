@@ -158,3 +158,15 @@ FROM beauty AS b
 FULL OUTER JOIN boys AS bo
 ON b.boyfriend_id = bo.id;
 */
+
+#交叉连接
+
+/*
+SELECT b.*, bo.*
+FROM beauty AS b
+CROSS JOIN boys AS bo;
+*/
+
+#sql82 vs. sql99
+#功能: sql99支持的较多
+#可读性: sql99实现连接条件和筛选条件的分离
