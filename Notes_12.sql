@@ -66,3 +66,11 @@ SELECT department_name, city
 FROM departments AS d, locations AS l
 WHERE d.location_id = l.location_id
 AND city LIKE '_o%';
+
+#5. 可以加分组?
+
+#案例1: 查询每个城市的部门个数
+SELECT COUNT(*) AS department_count, city
+FROM departments AS d, locations AS l
+WHERE d.location_id = l.location_id
+GROUP BY city;
