@@ -22,3 +22,10 @@ FROM employees AS e, departments AS d, locations AS l
 WHERE e.department_id = d.department_id
 AND d.location_id = l.location_id
 AND city = 'Toronto';
+
+#5. 查询每个工种, 每个部门的部门名, 工种名和最低工资
+SELECT department_name, job_title, MIN(salary) AS min_sal
+FROM employees AS e, departments AS d, jobs AS j
+WHERE e.department_id = d.department_id
+AND e.job_id = j.job_id
+GROUP BY department_name, job_title;
