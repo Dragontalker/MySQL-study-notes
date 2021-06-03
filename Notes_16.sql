@@ -11,3 +11,10 @@ FROM locations AS l
 LEFT OUTER JOIN departments AS d
 ON l.location_id = d.department_id
 WHERE department_id IS NULL;
+
+#3. 查询部门名为SAL或IT的员工信息
+SELECT e.*, d.department_name
+FROM departments AS d
+LEFT JOIN employees AS e
+ON d.department_id = e.department_id
+WHERE department_name IN ('SAL', 'IT');
