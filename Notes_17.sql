@@ -163,3 +163,13 @@ WHERE salary < ANY (
 	FROM employees
 	WHERE job_id = 'IT_PROG'
 ) AND job_id <> 'IT_PROG';
+
+#案例3: 返回其他部门中比job_id为'IT_PROG'部门虽有工资都低的员工的员工号, 姓名, job_id, 以及salary
+SELECT last_name, employee_id, job_id, salary
+FROM employees
+WHERE salary < ALL (
+	SELECT DISTINCT salary
+	FROM employees
+	WHERE job_id = 'IT_PROG'
+) AND job_id <> 'IT_PROG';
+
