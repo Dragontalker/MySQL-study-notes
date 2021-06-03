@@ -108,9 +108,10 @@ GROUP BY LENGTH(last_name);
 #2. 添加筛选条件
 #案例: 查询每个部门每个工种的员工的平均工资, 并且按平均工资的高低显示
 
-SELECT  AVG(salary), department_id, job_id
+SELECT  AVG(salary) AS a, department_id, job_id
 FROM employees
 WHERE department_id IS NOT NULL
 GROUP BY job_id, department_id
-ORDER BY AVG(salary) DESC;
+HAVING a > 10000
+ORDER BY a DESC;
 
