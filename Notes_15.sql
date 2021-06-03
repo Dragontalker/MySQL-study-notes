@@ -69,3 +69,12 @@ ON e.department_id = d.department_id
 GROUP BY department_name
 HAVING employee_count > 3
 ORDER BY employee_count DESC;
+
+#5. 查询员工名, 部门名, 工种名, 并按部门名降序()
+SELECT last_name, department_name, job_title
+FROM employees AS e
+INNER JOIN departments AS d
+ON e.department_id = d.department_id
+INNER JOIN jobs AS j
+ON e.job_id = j.job_id
+ORDER BY department_name DESC;
