@@ -147,3 +147,12 @@ FROM departments AS d
 LEFT OUTER JOIN employees AS e
 ON d.department_id = e.department_id
 WHERE e.employee_id IS NULL;
+
+#全外
+
+/*
+SELECT b.*, bo.*
+FROM beauty AS b
+FULL OUTER JOIN boys AS bo
+ON b.boyfriend_id = bo.id;
+*/
