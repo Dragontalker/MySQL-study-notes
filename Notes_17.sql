@@ -79,3 +79,11 @@ WHERE job_id = (
 	FROM employees
 	WHERE employee_id = 143
 );
+
+#案例3： 返回公司工资最少的员工的last_name, job_id和salary
+
+#(1)查询公司的最低工资
+SELECT MIN(salary)
+FROM employees;
+
+
