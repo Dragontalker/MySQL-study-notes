@@ -61,4 +61,11 @@ INNER JOIN departments AS d
 ON e.department_id = d.department_id
 GROUP BY department_name;
 
-#(2)在
+#(2)在(1)的结果上筛选员工个数>3的纪律, 并排序
+SELECT COUNT(*) as employee_count, department_name
+FROM employees AS e
+INNER JOIN departments AS d
+ON e.department_id = d.department_id
+GROUP BY department_name
+HAVING employee_count > 3
+ORDER BY employee_count DESC;
