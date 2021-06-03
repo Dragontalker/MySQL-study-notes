@@ -272,3 +272,11 @@ WHERE d.department_id IN (
 	SELECT department_id
     FROM employees
 );
+
+#案例2: 查询没有女朋友的男神信息
+SELECT bo.name
+FROM boys AS bo
+WHERE bo.id NOT IN(
+	SELECT boyfriend_id
+    FROM beauty
+);
