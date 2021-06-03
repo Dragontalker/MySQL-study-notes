@@ -4,3 +4,7 @@ SELECT
 FROM employees
 GROUP BY job_id
 ORDER BY job_id;
+
+#2. 查询员工最高工资和最低工资的差距(DIFFERENCE)
+SELECT MAX(salary) - MIN(salary) AS difference
+FROM employees;
