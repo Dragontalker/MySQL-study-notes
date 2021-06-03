@@ -90,5 +90,14 @@ ORDER BY department_name DESC;
 
 SELECT salary, grade_level
 FROM employees AS e
-	JOIN job_grades AS g
-	ON e.salary BETWEEN g.lowest_sal AND g.highest_sal;
+JOIN job_grades AS g
+ON e.salary BETWEEN g.lowest_sal AND g.highest_sal;
+    
+#查询每个工资级别的个数>20, 并且按工资级别降序排序
+SELECT COUNT(*) AS salary_count, grade_level
+FROM employees AS e
+JOIN job_grades AS g
+ON e.salary BETWEEN g.lowest_sal AND g.highest_sal
+GROUP BY grade_level
+HAVING salary_count > 20
+ORDER BY grade_level DESC;
