@@ -89,3 +89,10 @@ FROM employees AS e, jobs AS j
 WHERE e.job_id = j.job_id
 GROUP BY job_title
 ORDER BY COUNT(*) DESC;
+
+#7. 可以实现三表连接?
+#案例: 查询员工名, 部门名和所在的城市
+SELECT last_name, department_name, city
+FROM employees AS e, departments AS d, locations AS l
+WHERE e.department_id = d.department_id
+AND d.location_id = l.location_id;
