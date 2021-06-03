@@ -116,3 +116,11 @@ FROM employees AS e
 JOIN employees AS m
 ON e.manager_id = m.employee_id
 WHERE e.last_name LIKE '%k%';
+
+#二、外连接
+
+/*
+应用场景: 用于查询一个表中有, 另一个表里没有的数据
+*/
+
+#引入: 查询男朋友不再男神表的女神名
