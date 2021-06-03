@@ -41,3 +41,11 @@ FROM employees AS e
 INNER JOIN jobs AS j
 ON e.job_id = j.job_id
 WHERE e.last_name LIKE '%e%';
+
+#案例3: 查询部门个数>3的城市名和部门个数(添加分组+筛选)
+SELECT city, COUNT(*) AS department_count
+FROM departments AS d
+INNER JOIN locations AS l
+ON d.location_id = l.location_id
+GROUP BY city
+HAVING department_count > 3;
