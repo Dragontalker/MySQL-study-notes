@@ -8,3 +8,10 @@ SELECT job_id, location_id, d.department_id
 FROM employees AS e, departments AS d
 WHERE e.department_id = d.department_id
 AND e.department_id = 90;
+
+#3. 选择所有有奖金的员工的last_name, department_name, location_id, city
+SELECT last_name, department_name, l.location_id, city
+FROM employees AS e, departments AS d, locations AS l
+WHERE e.department_id = d.department_id
+AND d.location_id = l.location_id
+AND e.commission_pct IS NOT NULL;
