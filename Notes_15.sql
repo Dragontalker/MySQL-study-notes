@@ -55,6 +55,10 @@ HAVING department_count > 3;
 #案例4: 查询哪个部门的员工个数>3的部门名和员工个数, 并按个数降序(添加排序)
 
 #(1)查询每个部门的员工个数
-SELECT COUNT(*) as employee_count, department_id
-FROM employees
-GROUP BY department_id;
+SELECT COUNT(*) as employee_count, department_name
+FROM employees AS e
+INNER JOIN departments AS d
+ON e.department_id = d.department_id
+GROUP BY department_name;
+
+#(2)在
