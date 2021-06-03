@@ -113,3 +113,10 @@ SELECT salary, grade_level
 FROM employees AS e, job_grades AS j
 WHERE salary BETWEEN j.lowest_sal AND j.highest_sal
 AND grade_level = 'A';
+
+#3、自连接
+
+#案例: 查询 员工名和上级的名称
+SELECT e.employee_id, e.last_name, m.employee_id, m.last_name
+FROM employees AS e, employees AS m
+WHERE e.manager_id = m.employee_id;
