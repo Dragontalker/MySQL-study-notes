@@ -62,3 +62,7 @@ SELECT job_id
 FROM employees
 WHERE employee_id = 141;
 
+#(2)查询143号员工的salary
+SELECT salary
+FROM employees
+WHERE employee_id = 143;
