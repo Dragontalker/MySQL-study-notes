@@ -39,5 +39,12 @@
 #列子查询, 一般搭配着多行操作符使用
 #in, any/some, all
 
+#1. 标量子查询
+#案例1： 谁的工资比Abel高?
+
+#(1)查询Abel的工资
+SELECT salary
+FROM employees
+WHERE last_name = 'Abel';
 
 
