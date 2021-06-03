@@ -185,3 +185,14 @@ FROM employees;
 SELECT MAX(salary)
 FROM employees;
 
+#(3)查询员工信息
+SELECT *
+FROM employees
+WHERE employee_id = (
+	SELECT MIN(employee_id)
+	FROM employees
+) AND salary = (
+	SELECT MAX(salary)
+	FROM employees
+);
+
