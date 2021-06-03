@@ -36,3 +36,13 @@ FROM departments AS d, locations AS l
 WHERE d.location_id = l.location_id
 GROUP BY country_id
 HAVING depar_count > 2;
+
+#7. 选择指定员工的姓名, 员工号, 以及他的管理者的姓名和员工号, 结果类似于下面的格式
+SELECT 
+	e.last_name, 
+    e.employee_id AS "Emp#", 
+    m.last_name AS manager, 
+    m.employee_id AS "Mgr#"
+FROM employees AS e, employees AS m
+WHERE e.manager_id = m.employee_id
+AND e.last_name = 'kochhar';
