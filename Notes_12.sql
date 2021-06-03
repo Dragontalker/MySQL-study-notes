@@ -41,8 +41,16 @@ WHERE employees.department_id = departments.department_id;
 /*
 (1)提高语句的简洁度
 (2)区分多个重名的字段
+
+注意： 如果为表起了别名, 则查询的字段就不能使用原来的表名去限定
 */
+
 #查询工种号、工种名、员工名
 SELECT last_name, e.job_id, job_title
 FROM employees AS e, jobs AS j
 WHERE e.job_id = j.job_id;
+
+#3. 两个表的顺序是否可以调换
+SELECT last_name, e.job_id, job_title
+FROM jobs AS j, employees AS e
+WHERE j.job_id = e.job_id;
