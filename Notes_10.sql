@@ -106,7 +106,11 @@ FROM employees
 GROUP BY LENGTH(last_name);
 
 #2. 添加筛选条件
-SELECT COUNT(*) AS c, LENGTH(last_name) AS len_name
+#案例: 查询每个部门每个工种的员工的平均工资, 并且按平均工资的高低显示
+
+SELECT  AVG(salary), department_id, job_id
 FROM employees
-GROUP BY len_name
-HAVING c > 5;
+WHERE department_id IS NOT NULL
+GROUP BY job_id, department_id
+ORDER BY AVG(salary) DESC;
+
