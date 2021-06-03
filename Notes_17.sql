@@ -203,3 +203,13 @@ WHERE (employee_id, salary) = (
     FROM employees
 );
 
+#二、select后面
+
+#案例: 查询每个部门的员工个数
+SELECT d.*, (
+	SELECT COUNT(*) 
+    FROM employees AS e
+    WHERE e.department_id = d.department_id
+) AS count 
+FROM departments AS d;
+
