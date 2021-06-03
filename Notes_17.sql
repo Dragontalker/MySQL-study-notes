@@ -181,3 +181,7 @@ WHERE salary < ALL (
 SELECT MIN(employee_id)
 FROM employees;
 
+#(2)查询最高工资
+SELECT MAX(salary)
+FROM employees;
+
