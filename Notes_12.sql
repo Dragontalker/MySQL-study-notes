@@ -38,6 +38,10 @@ FROM employees, departments
 WHERE employees.department_id = departments.department_id;
 
 #2. 为表其别名
+/*
+(1)提高语句的简洁度
+(2)区分多个重名的字段
+*/
 #查询工种号、工种名、员工名
 SELECT last_name, e.job_id, job_title
 FROM employees AS e, jobs AS j
