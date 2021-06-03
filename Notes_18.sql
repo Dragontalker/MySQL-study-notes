@@ -27,3 +27,21 @@ WHERE salary > (
 	SELECT AVG(salary)
 	FROM employees
 );
+
+#3. 查询各部门中工资比本部门平均工资高的员工的员工号, 姓名和工资
+
+#(1)查询各部门的平均工资
+SELECT AVG(salary), department_id
+FROM employees
+GROUP BY department_id;
+
+#(2)连接(1)结果集和employees表, 再进行筛选
+SELECT employee_id, last_name, salary, e.department_id
+FROM employees AS e
+INNER JOIN (
+	SELECT AVG(salary) AS ag, department_id
+	FROM employees
+	GROUP BY department_id
+) AS ag_dep
+ON e.department_id = ag_dep.department_id
+WHERE salary > ag_dep.ag;
