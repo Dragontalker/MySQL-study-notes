@@ -109,3 +109,10 @@ SELECT e.last_name, m.last_name
 FROM employees AS e
 JOIN employees AS m
 ON e.manager_id = m.employee_id;
+
+#查询姓名中包含字符的员工、上级的名字
+SELECT e.last_name, m.last_name
+FROM employees AS e
+JOIN employees AS m
+ON e.manager_id = m.employee_id
+WHERE e.last_name LIKE '%k%';
