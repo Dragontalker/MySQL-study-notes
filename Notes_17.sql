@@ -47,4 +47,12 @@ SELECT salary
 FROM employees
 WHERE last_name = 'Abel';
 
+#(2)查询员工的信息, 满足salary > (1)的结果
+SELECT *
+FROM employees
+WHERE salary > (
+	SELECT salary
+	FROM employees
+	WHERE last_name = 'Abel'
+);
 
