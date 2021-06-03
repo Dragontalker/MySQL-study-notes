@@ -133,3 +133,8 @@ WHERE e.last_name LIKE '%k%';
 */
 
 #引入: 查询男朋友不再男神表的女神名
+SELECT b.name, bo.*
+FROM beauty AS b
+LEFT OUTER JOIN boys AS bo
+ON b.boyfriend_id = bo.id
+WHERE bo.id IS NULL;
