@@ -20,3 +20,8 @@ SELECT s.name, g.name, r.score
 FROM student AS s, grade AS g, result as r
 WHERE s.id = r.studentNO
 AND g.id = s.gradeId;
+
+#5. 显示当前日期, 以及去前后空格, 截取子字符串的函数
+SELECT NOW();
+SELECT TRIM(字符 from '');
+SELECT SUBSTR(str, startIndex, strLength);
