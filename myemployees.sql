@@ -71,3 +71,6 @@ CREATE TABLE job_grades (
     lowest_sal INT,
     highest_sal INT
 );
+
+INSERT INTO job_grades
+VALUE('A', 1000, 2999);
