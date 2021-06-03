@@ -56,7 +56,13 @@ FROM jobs AS j, employees AS e
 WHERE j.job_id = e.job_id;
 
 #4. 可以加筛选?
-#案例: 查询有奖金的员工名、部门名
+#案例1: 查询有奖金的员工名、部门名
 SELECT last_name, department_name, commission_pct
 FROM employees AS e, departments AS d
 WHERE e.department_id = d.department_id AND e.commission_pct IS NOT NULL;
+
+#案例2: 查询城市名中第二个字符为o的部门名和城市名
+SELECT department_name, city
+FROM departments AS d, locations AS l
+WHERE d.location_id = l.location_id
+AND city LIKE '_o%';
