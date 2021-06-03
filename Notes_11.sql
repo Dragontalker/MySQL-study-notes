@@ -15,3 +15,9 @@ FROM employees
 WHERE manager_id IS NOT NULL 
 GROUP BY manager_id
 HAVING MIN(salary) >= 6000;
+
+#4. 查询所有部门的编号, 员工数量和工资平均值, 并按平均工资降序
+SELECT department_id, COUNT(*), AVG(salary) AS a
+FROM employees
+GROUP BY department_id
+ORDER BY a DESC;
