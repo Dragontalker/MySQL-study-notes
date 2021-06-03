@@ -255,3 +255,20 @@ exists(完整的查询语句)
 */
 
 SELECT EXISTS(SELECT employee_id FROM employees WHERE salary = 30000);
+
+#案例1: 查询有员工的部门名
+SELECT department_name
+FROM departments AS d
+WHERE EXISTS(
+	SELECT *
+    FROM employees AS e
+    WHERE d.department_id = e.department_id
+);
+
+#使用in代替
+SELECT department_name
+FROM departments AS d
+WHERE d.department_id IN (
+	SELECT department_id
+    FROM employees
+);
