@@ -15,3 +15,10 @@ FROM employees AS e, departments AS d, locations AS l
 WHERE e.department_id = d.department_id
 AND d.location_id = l.location_id
 AND e.commission_pct IS NOT NULL;
+
+#4. 选择city在Toronto工作的员工的last_name, job_id, department_id, department_name
+SELECT last_name, job_id, d.department_id, department_name
+FROM employees AS e, departments AS d, locations AS l
+WHERE e.department_id = d.department_id
+AND d.location_id = l.location_id
+AND city = 'Toronto';
