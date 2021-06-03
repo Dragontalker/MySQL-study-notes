@@ -37,8 +37,8 @@ SELECT last_name, department_name
 FROM employees, departments
 WHERE employees.department_id = departments.department_id;
 
-#2. 
+#2. 为表其别名
 #查询工种号、工种名、员工名
-SELECT last_name, employees.job_id, job_title
-FROM employees, jobs
-WHERE employees.job_id = jobs.job_id;
+SELECT last_name, e.job_id, job_title
+FROM employees AS e, jobs AS j
+WHERE e.job_id = j.job_id;
