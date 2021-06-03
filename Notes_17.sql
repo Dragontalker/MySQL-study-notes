@@ -196,3 +196,10 @@ WHERE employee_id = (
 	FROM employees
 );
 
+SELECT *
+FROM employees
+WHERE (employee_id, salary) = (
+	SELECT MIN(employee_id), MAX(salary)
+    FROM employees
+);
+
