@@ -74,3 +74,6 @@ CREATE TABLE job_grades (
 
 INSERT INTO job_grades
 VALUE('A', 1000, 2999);
+
+INSERT INTO job_grades
+VALUE('B', 3000, 5999);
