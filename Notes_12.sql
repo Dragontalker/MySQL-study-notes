@@ -74,3 +74,10 @@ SELECT COUNT(*) AS department_count, city
 FROM departments AS d, locations AS l
 WHERE d.location_id = l.location_id
 GROUP BY city;
+
+#案例2: 查询出有奖金的每个部门的部门名和部门的领导编号和该部门的最低工资
+SELECT department_name, d.manager_id, MIN(salary) AS min_salary
+FROM departments AS d, employees AS e
+WHERE d.department_id = e.department_id
+AND commission_pct IS NOT NULL
+GROUP BY department_name, d.manager_id;
