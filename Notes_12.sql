@@ -54,3 +54,9 @@ WHERE e.job_id = j.job_id;
 SELECT last_name, e.job_id, job_title
 FROM jobs AS j, employees AS e
 WHERE j.job_id = e.job_id;
+
+#4. 可以加筛选?
+#案例: 查询有奖金的员工名、部门名
+SELECT last_name, department_name, commission_pct
+FROM employees AS e, departments AS d
+WHERE e.department_id = d.department_id AND e.commission_pct IS NOT NULL;
