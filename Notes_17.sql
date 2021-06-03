@@ -226,7 +226,17 @@ SELECT (
 
 #案例: 查询每个部门的平均工资的工资等级
 
-#查询每个部门的平均工资
+#(1)查询每个部门的平均工资
 SELECT AVG(salary), department_id
 FROM employees
 GROUP BY department_id;
+
+#(2)连接(1)的结果集和job_grades表, 筛选条件平均工资 between lowest_sal and highest_sal
+SELECT ag_dep.*, g.grade_level
+FROM (
+	SELECT AVG(salary) AS ag, department_id
+	FROM employees
+	GROUP BY department_id
+) AS ag_dep
+INNER JOIN job_grades AS g
+ON ag_dep.ag BETWEEN lowest_sal AND highest_sal;
