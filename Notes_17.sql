@@ -117,3 +117,15 @@ HAVING MIN(salary) > (
 	FROM employees
 	WHERE department_id = 50
 );
+
+#非法使用标量子查询
+/*
+SELECT MIN(salary), department_id
+FROM employees
+GROUP BY department_id
+HAVING MIN(salary) > (
+	SELECT salary //多行子查询
+	FROM employees
+	WHERE department_id = 50
+);
+*/
