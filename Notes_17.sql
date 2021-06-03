@@ -100,3 +100,8 @@ WHERE salary = (
 SELECT MIN(salary)
 FROM employees
 WHERE department_id = 50;
+
+#(2)查询每个部门的最低工资
+SELECT MIN(salary), department_id
+FROM employees
+GROUP BY department_id;
