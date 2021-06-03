@@ -10,7 +10,7 @@
 分类:
 	按年代分类：
     sql92标准: 仅仅支持内连接
-    sql99标准: [推荐使用] 支持内连接+外连接
+    sql99标准: [推荐使用] 支持内连接+外连接+交叉连接
     
     按功能分类:
 		内连接:
@@ -24,5 +24,9 @@
         交叉连接
 */
 
+#一、sql92标准
+#1. 等值连接
+
+#案例1： 查询女神名和对应的男生名
 SELECT NAME, boyName FROM boys, beauty
 WHERE beauty.boyfriend_id = boys.id;
