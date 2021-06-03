@@ -19,3 +19,11 @@ WHERE department_id = (
 #(1)查询平均工资
 SELECT AVG(salary)
 FROM employees;
+
+#(2)查询工资>(1)的员工号, 姓名和工资
+SELECT last_name, employee_id, salary
+FROM employees
+WHERE salary > (
+	SELECT AVG(salary)
+	FROM employees
+);
