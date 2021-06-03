@@ -105,3 +105,11 @@ WHERE e.department_id = d.department_id
 AND d.location_id = l.location_id
 AND city LIKE 's%'
 ORDER BY department_name DESC;
+
+#2、非等值连接
+
+#案例1: 查询员工的工资和工资级别
+SELECT salary, grade_level
+FROM employees AS e, job_grades AS j
+WHERE salary BETWEEN j.lowest_sal AND j.highest_sal
+AND grade_level = 'A';
