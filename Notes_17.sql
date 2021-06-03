@@ -222,3 +222,11 @@ SELECT (
     WHERE e.employee_id = 102
 ) AS dep_102;
 
+#三、from后面
+
+#案例: 查询每个部门的平均工资的工资等级
+
+#查询每个部门的平均工资
+SELECT AVG(salary), department_id
+FROM employees
+GROUP BY department_id;
