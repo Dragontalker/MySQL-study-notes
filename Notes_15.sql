@@ -34,3 +34,10 @@ SELECT last_name, department_name
 FROM employees AS e
 INNER JOIN departments AS d
 ON e.department_id = d.department_id;
+
+#案例2： 查询名字中包含e的员工名和工种名(添加筛选)
+SELECT last_name, job_title
+FROM employees AS e
+INNER JOIN jobs AS j
+ON e.job_id = j.job_id
+WHERE e.last_name LIKE '%e%';
