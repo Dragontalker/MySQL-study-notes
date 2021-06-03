@@ -29,3 +29,10 @@ FROM employees AS e, departments AS d, jobs AS j
 WHERE e.department_id = d.department_id
 AND e.job_id = j.job_id
 GROUP BY department_name, job_title;
+
+#6. 查询每个国家下的部门个数大于2的国家编号
+SELECT country_id, COUNT(*) AS depar_count
+FROM departments AS d, locations AS l
+WHERE d.location_id = l.location_id
+GROUP BY country_id
+HAVING depar_count > 2;
