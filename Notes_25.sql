@@ -61,6 +61,12 @@ DESC book;
 DESC book_author;
 
 #2. 表的修改
+
+/*
+alter table 表名
+add|drop|modify|change column
+*/
+
 #(1)修改列名
 ALTER TABLE book
 CHANGE COLUMN publishDate pubDate DATETIME;
