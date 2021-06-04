@@ -49,3 +49,8 @@ VALUES
 UPDATE my_employees
 SET last_name = 'drelxer'
 WHERE id = 3;
+
+#6. 将所有工资少于900的员工的工资修改为1000
+UPDATE my_employees
+SET salary = 1000
+WHERE salary < 900;
