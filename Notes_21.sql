@@ -127,3 +127,9 @@ HAVING AVG(salary) > (
 	SELECT AVG(salary)
 	FROM employees
 );
+
+#6. 查询出公司中所有manger的详细信息
+
+#(1)查询出所有manager的员工编号
+SELECT DISTINCT manager_id
+FROM employees;
