@@ -138,10 +138,16 @@ delete from 表名 where 筛选条件
 
 sql92语法:
 delete 表1的别名, 表2的别名
-FROM 表1 别民, 表2, 别名
+FROM 表1 别民, 表2 别名
 WHERE 连接条件
 AND 筛选条件;
 
+sql99的语法:
+delete 表1的别名, 表2的别名
+FROM 表1 别民
+INNER|RIGHT|LEFT JOIN 表2 别名
+ON 连接条件
+WHERE 筛选条件;
 
 方式二: truncate
 语法: truncate table 表名;
