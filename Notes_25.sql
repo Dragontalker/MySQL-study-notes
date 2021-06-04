@@ -74,4 +74,7 @@ ALTER TABLE author
 ADD COLUMN annual DOUBLE;
 
 #(4)删除列
+ALTER TABLE author
+DROP COLUMN annual;
+
 #(5)修改表名
