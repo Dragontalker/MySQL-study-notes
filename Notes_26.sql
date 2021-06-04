@@ -14,3 +14,11 @@ SELECT department_id, department_name
 FROM myemployees.departments;
 
 SELECT * FROM dept2;
+
+#3. 创建一个表emp5
+CREATE TABLE emp5(
+	id INT(7),
+    first_name VARCHAR(25),
+    last_name VARCHAR(25),
+    dept_id INT(7)
+);
