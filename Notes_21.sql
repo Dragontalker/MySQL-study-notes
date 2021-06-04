@@ -28,7 +28,7 @@ FROM (
 ) ag_dep;
 
 #(3)查询哪个部门的平均工资=(2)
-SELECT AVG(salary), department_id
+SELECT department_id
 FROM employees
 GROUP BY department_id
 HAVING AVG(salary) = (
@@ -38,4 +38,21 @@ HAVING AVG(salary) = (
 		FROM employees
 		GROUP BY department_id
 	) ag_dep
+);
+
+#(4)查询部门信息
+SELECT d.*
+FROM departments AS d
+WHERE d.department_id = (
+	SELECT department_id
+	FROM employees
+	GROUP BY department_id
+	HAVING AVG(salary) = (
+		SELECT MIN(ag)
+		FROM (
+			SELECT AVG(salary) AS ag, department_id
+			FROM employees
+			GROUP BY department_id
+		) ag_dep
+	)
 );
