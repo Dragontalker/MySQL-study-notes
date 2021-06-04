@@ -109,3 +109,19 @@ CREATE TABLE tab_char(
 	c1 ENUM('a', 'b', 'c')
 );
 
+SELECT * FROM tab_char;
+
+INSERT INTO tab_char VALUE ('a');
+INSERT INTO tab_char VALUE ('b');
+INSERT INTO tab_char VALUE ('c');
+INSERT INTO tab_char VALUE ('A');
+INSERT INTO tab_char VALUE ('m');
+
+CREATE TABLE tab_set(
+	s1 SET('a', 'b', 'c', 'd')
+);
+
+SELECT * FROM tab_set;
+
+INSERT INTO tab_set VALUES ('a');
+INSERT INTO tab_set VALUES ('a,b,c');
