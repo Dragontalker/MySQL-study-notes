@@ -69,3 +69,6 @@ DELETE FROM users;
 #9. 检查所作的修正
 SELECT * FROM my_employees;
 SELECT * FROM users;
+
+#10. 清空my_employees
+TRUNCATE my_employees;
