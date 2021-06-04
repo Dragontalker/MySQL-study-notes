@@ -55,17 +55,22 @@ decimal(M, D)
 
 特点:
 (1)M和D
+	- M: 整数部位 + 小数部位
+    - D: 小数部位
+    - M和D都可以省略
 
 */
 
 #测试M和D
+DROP TABLE IF EXISTS tab_float;
 CREATE TABLE tab_float(
-	f1 FLOAT(5, 2),
-    f2 DOUBLE(5, 2),
-    f3 DECIMAL(5, 2)
+	f1 FLOAT,
+    f2 DOUBLE,
+    f3 DECIMAL
 );
 
 SELECT * FROM tab_float;
+DESC tab_float;
 
 INSERT INTO tab_float VALUES(123.45, 123.45, 123.45);
-
+INSERT INTO tab_float VALUES(1523.45, 1523.45, 1523.45);
