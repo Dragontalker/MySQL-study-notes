@@ -88,4 +88,5 @@ ALTER TABLE author
 RENAME TO book_author;
 
 #3. 表的删除
-DROP TABLE book_author;
+DROP TABLE IF EXISTS book_author;
+SHOW TABLES;
