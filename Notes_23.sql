@@ -88,3 +88,8 @@ WHERE 筛选条件;
 UPDATE beauty
 SET phone = '138999999'
 WHERE NAME LIKE '唐%';
+
+#案例2: 修改boys中的2号男神为张飞, 魅力值10
+UPDATE boys
+SET boyname = '张飞', usercp = 10
+WHERE id = 2;
