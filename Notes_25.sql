@@ -22,3 +22,7 @@ create database [IF NOT EXISTS] 库名;
 
 #案例: 创建库Books
 CREATE DATABASE IF NOT EXISTS books;
+
+#2. 库的修改
+#更改库的字符集
+ALTER DATABASE books CHARACTER SET gbk;
