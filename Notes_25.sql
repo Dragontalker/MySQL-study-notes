@@ -58,7 +58,7 @@ CREATE TABLE author(
 );
 
 DESC book;
-DESC author;
+DESC book_author;
 
 #2. 表的修改
 #(1)修改列名
@@ -78,3 +78,5 @@ ALTER TABLE author
 DROP COLUMN annual;
 
 #(5)修改表名
+ALTER TABLE author
+RENAME TO book_author;
