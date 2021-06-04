@@ -20,3 +20,8 @@
 SELECT *
 FROM employees
 LIMIT 0, 5;
+
+#从第一条开始也支持直接写size
+SELECT *
+FROM employees
+LIMIT 5;
