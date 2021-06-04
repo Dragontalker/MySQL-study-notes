@@ -170,3 +170,16 @@ FROM employees
 GROUP BY department_id
 ORDER BY AVG(salary) DESC
 LIMIT 1;
+
+#(2)将employees和departments连接查询, 筛选条件是(1)
+SELECT last_name, d.department_id, email, salary
+FROM employees AS e
+INNER JOIN departments AS d
+ON e.manager_id = d.manager_id
+WHERE d.department_id = (
+	SELECT department_id
+	FROM employees
+	GROUP BY department_id
+	ORDER BY AVG(salary) DESC
+	LIMIT 1
+);
