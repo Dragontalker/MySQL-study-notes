@@ -40,3 +40,12 @@ create table 表名(
     ...
 );
 */
+
+#案例: 创建表book
+CREATE TABLE book (
+	id INT, #编号
+    bname VARCHAR(20), #图书名
+    price DOUBLE, #价格
+    authorId INT, #作者
+    publishDate DATETIME #出版日期
+);
