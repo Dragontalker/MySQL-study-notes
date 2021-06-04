@@ -17,8 +17,8 @@
 #1. 库的创建
 
 /*
-create database 库名;
+create database [IF NOT EXISTS] 库名;
 */
 
 #案例: 创建库Books
-CREATE DATABASE books;
+CREATE DATABASE IF NOT EXISTS books;
