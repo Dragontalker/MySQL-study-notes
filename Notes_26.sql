@@ -22,3 +22,7 @@ CREATE TABLE emp5(
     last_name VARCHAR(25),
     dept_id INT(7)
 );
+
+#4. 将列last_name的长度增加到50
+ALTER TABLE emp5
+MODIFY COLUMN last_name VARCHAR(50);
