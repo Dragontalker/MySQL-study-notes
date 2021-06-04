@@ -35,3 +35,12 @@ SELECT 2, 'Dancs', 'Betty', 'Bdancs', 860 UNION
 SELECT 3, 'Biri', 'Ben', 'Bbiri', 1100 UNION
 SELECT 4, 'Newman', 'Chad', 'Cnewman', 750 UNION
 SELECT 5, 'Ropeburn', 'Andrey', 'Aropebur', 1550;     
+
+#4. 向users表中插入数据
+INSERT INTO users
+VALUES
+	(1, 'Raptel', 10),
+    (2, 'Bdancs', 10),
+    (3, 'Bbiri', 20),
+    (4, 'Cnewman', 30),
+    (5, 'Aropebur', 40);
