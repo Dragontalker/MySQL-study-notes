@@ -30,3 +30,10 @@ LIMIT 5;
 SELECT *
 FROM employees
 LIMIT 10, 15;
+
+#案例3: 有奖金的员工信息, 并且工资较高的前10名显示出来
+SELECT *
+FROM employees
+WHERE commission_pct IS NOT NULL
+ORDER BY salary DESC
+LIMIT 10;
