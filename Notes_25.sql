@@ -26,3 +26,6 @@ CREATE DATABASE IF NOT EXISTS books;
 #2. 库的修改
 #更改库的字符集
 ALTER DATABASE books CHARACTER SET gbk;
+
+#3. 库的删除
+DROP DATABASE IF EXISTS books;
