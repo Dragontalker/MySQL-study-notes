@@ -180,3 +180,11 @@ WHERE bo.boyName = '黄晓明';
 
 #案例: 将魅力值大于100的男生信息删除
 TRUNCATE TABLE boys;
+
+#delete vs. truncate
+
+/*
+1. delete可以加where条件, trucnate不能加
+2. truncate删除, 效率高一丢丢
+3. 假如要删除的表中有自增长列, 如果用delete删除后, 再插入数据, 自增长值从1开始
+*/
