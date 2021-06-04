@@ -17,3 +17,21 @@ CREATE TABLE users(
 
 #2. 显示表my_employees的结构
 DESC my_employees;
+
+#3. 向my_employees表插入下列数据
+#方式1:
+INSERT INTO my_employees
+VALUES
+	(1, 'Petel', 'Ralph', 'Rpatel', 895),
+    (2, 'Dancs', 'Betty', 'Bdancs', 860),
+    (3, 'Biri', 'Ben', 'Bbiri', 1100),
+    (4, 'Newman', 'Chad', 'Cnewman', 750),
+    (5, 'Ropeburn', 'Andrey', 'Aropebur', 1550);
+    
+#方式2:
+INSERT INTO my_employees
+SELECT 1, 'Petel', 'Ralph', 'Rpatel', 895 UNION
+SELECT 2, 'Dancs', 'Betty', 'Bdancs', 860 UNION
+SELECT 3, 'Biri', 'Ben', 'Bbiri', 1100 UNION
+SELECT 4, 'Newman', 'Chad', 'Cnewman', 750 UNION
+SELECT 5, 'Ropeburn', 'Andrey', 'Aropebur', 1550;     

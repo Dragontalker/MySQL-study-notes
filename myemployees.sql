@@ -91,17 +91,3 @@ VALUE('E', 15000, 24999);
 
 INSERT INTO job_grades
 VALUE('F', 25000, 40000);
-
-CREATE TABLE my_employees(
-	id INT(10),
-    first_name VARCHAR(10),
-    last_name VARCHAR(10),
-    userId VARCHAR(10),
-    salary DOUBLE(10, 2)
-);
-
-CREATE TABLE users(
-	id INT,
-    userId VARCHAR(10),
-    department_id INT
-);
