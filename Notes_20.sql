@@ -15,5 +15,7 @@ GROUP BY sex;
 
 #3. 查询年龄>18的所有学生的姓名和年级名称
 SELECT name, gradeName
-FROM stuinfo
+FROM stuinfo AS s
+INNER JOIN grade AS g
+On s.gradeId = g.id
 WHERE age > 18;
