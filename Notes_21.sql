@@ -141,3 +141,12 @@ WHERE employee_id = ANY(
 	SELECT DISTINCT manager_id
 	FROM employees
 );
+
+#7. 各个部门中, 最高工资中最低的那个部门的最低的工资是多少
+
+#(1)查询各部门的最高工资
+SELECT MAX(salary)
+FROM employees
+GROUP BY department_id
+ORDER BY MAX(salary)
+LIMIT 1;
