@@ -77,3 +77,10 @@ WHERE department_id = ANY(
 	FROM departments
 	WHERE location_id = 1700
 );
+
+#6. 查询管理者是King的员工姓名和工资
+
+#(1)查询姓名为king的员工编号
+SELECT employee_id
+FROM employees
+WHERE last_name = 'k_ing';
