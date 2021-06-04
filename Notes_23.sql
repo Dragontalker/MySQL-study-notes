@@ -135,4 +135,15 @@ WHERE bo.id IS NULL;
 delete from 表名 where 筛选条件
 
 2. 多表的删除[补充]
+
+方式二: truncate
+语法: truncate table 表名;
 */
+
+#方式一: delete
+
+#1. 单表的删除
+
+#案例1: 删除手机号以9结尾的女生信息
+DELETE FROM beauty
+WHERE phone LIKE '%9';
