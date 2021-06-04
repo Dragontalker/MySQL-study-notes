@@ -105,3 +105,8 @@ VALUES
     (2, '莫言', '中国'),
     (3, '冯唐', '中国'),
     (4, '金庸', '中国');
+    
+#(1)仅仅复制表的结构
+CREATE TABLE copy LIKE author;
+SELECT * FROM author;
+SELECT * FROM copy;
