@@ -130,5 +130,9 @@ WHERE bo.id IS NULL;
 方式一: delete
 
 语法:
+
+1. 单表的删除[*]
 delete from 表名 where 筛选条件
+
+2. 多表的删除[补充]
 */
