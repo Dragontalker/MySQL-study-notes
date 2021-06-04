@@ -96,3 +96,14 @@ FROM employees
 GROUP BY job_id
 ORDER BY AVG(salary) DESC
 LIMIT 1;
+
+#(2)查询job信息
+SELECT *
+FROM jobs
+WHERE job_id = (
+	SELECT job_id
+	FROM employees
+	GROUP BY job_id
+	ORDER BY AVG(salary) DESC
+	LIMIT 1)
+;
