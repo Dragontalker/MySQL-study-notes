@@ -33,3 +33,7 @@ LIKE myemployees.employees;
 
 #6. 删除表emp5
 DROP TABLE IF EXISTS emp5;
+
+#7. 将表employees2重命名为emp5
+ALTER TABLE employees2
+RENAME TO emp5;
