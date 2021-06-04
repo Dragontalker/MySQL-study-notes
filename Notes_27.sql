@@ -96,4 +96,10 @@ varchar
 较长的文本:
 text
 blob(较大的二进制)
+
+特点:
+			写法			M的意思			空间的耗费 	效率
+char		char(M)		固定长度的字符		比较耗费		高
+
+varchar		varchar(M)	可变长度的字符		比较节省		低
 */
