@@ -61,3 +61,10 @@ WHERE department_id IN(
 	FROM employees
 	WHERE last_name LIKE '%u%'
 );
+
+#5. 查询在部门的location_id为1700的部门工作的员工的员工号
+
+#(1)查询location_id为1700的部门
+SELECT DISTINCT department_id
+FROM departments
+WHERE location_id = 1700;
