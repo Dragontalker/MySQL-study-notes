@@ -30,13 +30,13 @@ bigint (5 bytes)
 #1. 如何设置无符号和有符号
 DROP TABLE IF EXISTS tab_int;
 CREATE TABLE tab_int(
-	t1 INT(7),
+	t1 INT(7) ZEROFILL,
     t2 INT(7) UNSIGNED
 );
 
 DESC tab_int;
 
 INSERT INTO tab_int
-VALUES (-123456, -123456);
+VALUES (23, 23);
 
 SELECT * FROM tab_int;
