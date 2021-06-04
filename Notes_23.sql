@@ -14,3 +14,7 @@
 INSERT INTO 表名 (列名1, ...)
 VALUES (值1, ...)
 */
+
+#1. 插入的值的类型要与列的类型一致或兼容
+INSERT INTO beauty(id, NAME, sex, borndate, phone, photo, boyfriend_id)
+VALUES (13, '唐艺昕', '女', '1990-4-23', '1898888888', null, 2);
