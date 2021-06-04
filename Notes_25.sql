@@ -90,3 +90,10 @@ RENAME TO book_author;
 #3. 表的删除
 DROP TABLE IF EXISTS book_author;
 SHOW TABLES;
+
+#通用的写法:
+DROP DATABASE IF EXISTS my_database;
+CREATE DATABASE my_database;
+
+DROP TABLE IF EXISTS my_table;
+CREATE TABLE my_table;
