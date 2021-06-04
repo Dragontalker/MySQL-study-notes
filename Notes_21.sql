@@ -145,8 +145,19 @@ WHERE employee_id = ANY(
 #7. 各个部门中, 最高工资中最低的那个部门的最低的工资是多少
 
 #(1)查询各部门的最高工资
-SELECT MAX(salary)
+SELECT department_id
 FROM employees
 GROUP BY department_id
 ORDER BY MAX(salary)
 LIMIT 1;
+
+#(2)查询那个部门的最高工资=(1)
+SELECT MIN(SALARY), department_id
+FROM employees
+WHERE department_id = (
+	SELECT department_id
+	FROM employees
+	GROUP BY department_id
+	ORDER BY MAX(salary)
+	LIMIT 1
+);
