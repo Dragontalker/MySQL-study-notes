@@ -41,3 +41,17 @@ INSERT INTO tab_int
 VALUES (23, 23);
 
 SELECT * FROM tab_int;
+
+#二、小数
+
+/*
+1. 浮点型
+float(M, D)
+double(M, D)
+
+2. 定点型
+dec(M, D)
+decimal(M, D)
+
+
+*/
