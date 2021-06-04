@@ -66,3 +66,13 @@ SELECT id, boyname, phone
 FROM boys
 WHERE id < 3;
 */
+
+#二、修改语句
+
+/*
+
+1. 修改单表中的记录[*]
+
+2. 修改多表的记录[补充]
+
+*/
