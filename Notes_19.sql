@@ -15,3 +15,8 @@
 		- offset: 要显示条目的起始索引(起始索引从0开始)
         - size: 要显示的条目个数
 */
+
+#案例1: 查询前五条员工的信息
+SELECT *
+FROM employees
+LIMIT 0, 5;
