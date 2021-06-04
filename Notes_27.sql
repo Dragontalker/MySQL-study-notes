@@ -129,3 +129,9 @@ SELECT * FROM tab_set;
 
 INSERT INTO tab_set VALUES ('a');
 INSERT INTO tab_set VALUES ('a,b,c');
+
+#四、日期型
+CREATE TABLE tab_date(
+	t1 DATETIME,
+    t2 TIMESTAMP
+);
