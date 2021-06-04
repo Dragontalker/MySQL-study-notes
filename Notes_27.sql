@@ -141,3 +141,5 @@ SELECT * FROM tab_date;
 INSERT INTO tab_date VALUES (NOW(), NOW());
 
 SHOW VARIABLES LIKE 'time_zone';
+
+SET time_zone = '+9:00';
