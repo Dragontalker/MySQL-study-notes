@@ -42,3 +42,6 @@ VALUES (18, '张飞', '男', NULL, '119', NULL, NULL);
 INSERT INTO 表名
 SET 列名=值, 列名=值, ...
 */
+
+INSERT INTO beauty
+SET id = 19, NAME = '刘涛', phone = '999';
