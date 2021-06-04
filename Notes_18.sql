@@ -52,3 +52,12 @@ WHERE salary > ag_dep.ag;
 SELECT DISTINCT department_id
 FROM employees
 WHERE last_name LIKE '%u%';
+
+#(2)查询部门号=(1)中的任意一个的员工号和姓名
+SELECT last_name, employee_id
+FROM employees
+WHERE department_id IN(
+	SELECT DISTINCT department_id
+	FROM employees
+	WHERE last_name LIKE '%u%'
+);
