@@ -135,3 +135,9 @@ CREATE TABLE tab_date(
 	t1 DATETIME,
     t2 TIMESTAMP
 );
+
+SELECT * FROM tab_date;
+
+INSERT INTO tab_date VALUES (NOW(), NOW());
+
+SHOW VARIABLES LIKE 'time_zone';
