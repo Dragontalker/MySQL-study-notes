@@ -123,3 +123,11 @@ FROM author
 WHERE nation = '中国';
 
 SELECT * FROM copy3;
+
+#仅仅复制某些字段
+CREATE TABLE copy4
+SELECT id, au_name
+FROM author
+WHERE 0;
+
+SELECT * FROM copy4;
