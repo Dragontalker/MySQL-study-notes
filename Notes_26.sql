@@ -41,3 +41,8 @@ RENAME TO emp5;
 #8. 在表dept和emp5中添加新列test_column, 并检查所有的操作
 ALTER TABLE emp5
 ADD COLUMN test_column INT;
+
+#9. 直接删除表emp5中的列 dept_id
+DESC emp5;
+ALTER TABLE emp5
+DROP COLUMN test_column;
