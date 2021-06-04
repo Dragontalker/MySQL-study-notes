@@ -12,3 +12,13 @@
 修改: alter
 删除: drop
 */
+
+#一、库的管理
+#1. 库的创建
+
+/*
+create database 库名;
+*/
+
+#案例: 创建库Books
+CREATE DATABASE books;
