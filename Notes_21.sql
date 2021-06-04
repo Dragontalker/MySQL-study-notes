@@ -161,3 +161,12 @@ WHERE department_id = (
 	ORDER BY MAX(salary)
 	LIMIT 1
 );
+
+#8. 查询平均工资最高的部门的manager的详细信息: last_name, department_id, email, salary
+
+#(1)查询平均工资最高的部门编号
+SELECT department_id
+FROM employees
+GROUP BY department_id
+ORDER BY AVG(salary) DESC
+LIMIT 1;
