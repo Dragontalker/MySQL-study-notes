@@ -54,3 +54,10 @@ WHERE id = 3;
 UPDATE my_employees
 SET salary = 1000
 WHERE salary < 900;
+
+#7. 将userid为Bbiri的user表和my_employee表删除
+DELETE u, e
+FROM users AS u
+INNER JOIN my_employees AS e
+ON u.userId = e.userId
+WHERE u.userId = 'Bbiri';
