@@ -123,3 +123,12 @@ RIGHT JOIN beauty AS b
 ON bo.id = b.boyfriend_id
 SET b.boyfriend_id = 2
 WHERE bo.id IS NULL;
+
+#三、删除语句
+
+/*
+方式一: delete
+
+语法:
+delete from 表名 where 筛选条件
+*/
