@@ -97,3 +97,11 @@ CREATE DATABASE my_database;
 
 DROP TABLE IF EXISTS my_table;
 CREATE TABLE my_table;
+
+#4. 表的复制
+INSERT INTO author
+VALUES 
+	(1, '村上春树', '日本'),
+    (2, '莫言', '中国'),
+    (3, '冯唐', '中国'),
+    (4, '金庸', '中国');
