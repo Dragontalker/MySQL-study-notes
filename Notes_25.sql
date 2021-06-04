@@ -59,6 +59,9 @@ CREATE TABLE author(
 
 #2. 表的修改
 #(1)修改列名
+ALTER TABLE book
+CHANGE COLUMN publishDate pubDate DATETIME;
+
 #(2)修改列的类型或约束
 #(3)添加新的列
 #(4)删除列
