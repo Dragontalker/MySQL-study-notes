@@ -105,5 +105,11 @@ WHERE job_id = (
 	FROM employees
 	GROUP BY job_id
 	ORDER BY AVG(salary) DESC
-	LIMIT 1)
-;
+	LIMIT 1
+);
+
+#5.查询平均工资高于公司平均工资的部门有哪些?
+
+#(1)查询平均工资
+SELECT AVG(salary)
+FROM employees;
