@@ -22,3 +22,7 @@ VALUES (13, '唐艺昕', '女', '1990-4-23', '1898888888', null, 2);
 #2. 不可以为null的列必须插入值, 可以为null的列是如何插入值? 
 INSERT INTO beauty(id, NAME, sex, borndate, phone, boyfriend_id)
 VALUES (14, '金星', '女', '1990-4-23', '1388888888', 9);
+
+#3.列的顺序是否可以调换
+INSERT INTO beauty(NAME, sex, id, phone)
+VALUES('蒋欣', '女', 110, 160);
