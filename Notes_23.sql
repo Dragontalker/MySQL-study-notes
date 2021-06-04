@@ -175,3 +175,8 @@ FROM beauty AS b
 INNER JOIN boys AS bo
 ON b.boyfriend_id = bo.id
 WHERE bo.boyName = '黄晓明';
+
+#方式二: truncate语句
+
+#案例: 将魅力值大于100的男生信息删除
+TRUNCATE TABLE boys;
