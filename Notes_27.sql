@@ -24,13 +24,14 @@ bigint (5 bytes)
 特点:
 (1)如果不设置无符号还是有符号, 默认是有符号, 如果想设置无符号, 需要添加unsigned
 (2)如果插入的数值超出了整型的范围, 会报异常Out of Range, 并设置临界值
+(3)如果不设置长度, 会有默认的长度
 */
 
 #1. 如何设置无符号和有符号
 DROP TABLE IF EXISTS tab_int;
 CREATE TABLE tab_int(
-	t1 INT,
-    t2 INT UNSIGNED
+	t1 INT(7),
+    t2 INT(7) UNSIGNED
 );
 
 DESC tab_int;
