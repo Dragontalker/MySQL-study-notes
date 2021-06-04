@@ -29,3 +29,14 @@ ALTER DATABASE books CHARACTER SET gbk;
 
 #3. 库的删除
 DROP DATABASE IF EXISTS books;
+
+#二、表的管理
+#1. 表的创建 [*]
+
+/*
+create table 表名(
+	列名1 列1的类型[(长度) 列的约束],
+    列名2 列2的类型[(长度) 列的约束],
+    ...
+);
+*/
