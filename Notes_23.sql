@@ -168,3 +168,10 @@ FROM beauty AS b
 INNER JOIN boys AS bo
 ON b.boyfriend_id = bo.id
 WHERE bo.boyName = '张无忌';
+
+#案例: 删除黄晓明的信息已经他女朋友的信息
+DELETE b, bo
+FROM beauty AS b
+INNER JOIN boys AS bo
+ON b.boyfriend_id = bo.id
+WHERE bo.boyName = '黄晓明';
