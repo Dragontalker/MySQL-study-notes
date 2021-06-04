@@ -188,4 +188,5 @@ TRUNCATE TABLE boys;
 2. truncate删除, 效率高一丢丢
 3. 假如要删除的表中有自增长列, 如果用delete删除后, 再插入数据, 自增长值从1开始
 4. truncate删除没有返回值, delete删除有返回值
+5. truncate删除不能回滚, delete删除可以回滚
 */
