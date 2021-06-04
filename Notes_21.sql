@@ -133,3 +133,11 @@ HAVING AVG(salary) > (
 #(1)查询出所有manager的员工编号
 SELECT DISTINCT manager_id
 FROM employees;
+
+#(2)查询详细信息, 满足employee_id = (1)
+SELECT *
+FROM employees
+WHERE employee_id = ANY(
+	SELECT DISTINCT manager_id
+	FROM employees
+);
