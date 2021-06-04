@@ -61,3 +61,7 @@ FROM users AS u
 INNER JOIN my_employees AS e
 ON u.userId = e.userId
 WHERE u.userId = 'Bbiri';
+
+#8. 删除所有数据
+DELETE FROM my_employees;
+DELETE FROM users;
