@@ -26,3 +26,7 @@ CREATE TABLE emp5(
 #4. 将列last_name的长度增加到50
 ALTER TABLE emp5
 MODIFY COLUMN last_name VARCHAR(50);
+
+#5. 根据表employees创建employees2
+CREATE TABLE employees2
+LIKE myemployees.employees;
