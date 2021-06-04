@@ -81,3 +81,10 @@ WHERE 筛选条件;
 2. 修改多表的记录[补充]
 
 */
+
+#1. 修改单表的记录
+
+#案例1: 修改beauty表中姓唐的女神的电话为138999999
+UPDATE beauty
+SET phone = '138999999'
+WHERE NAME LIKE '唐%';
