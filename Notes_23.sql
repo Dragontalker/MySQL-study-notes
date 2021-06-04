@@ -116,3 +116,10 @@ INNER JOIN beauty AS b
 ON bo.id = b.boyfriend_id
 SET b.phone = '114'
 WHERE bo.boyName = '张无忌';
+
+#案例2: 修改没有男朋友的女神的男朋友编号都为2
+UPDATE boys AS bo
+RIGHT JOIN beauty AS b
+ON bo.id = b.boyfriend_id
+SET b.boyfriend_id = 2
+WHERE bo.id IS NULL;
