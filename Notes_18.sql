@@ -84,3 +84,12 @@ WHERE department_id = ANY(
 SELECT employee_id
 FROM employees
 WHERE last_name = 'k_ing';
+
+#(2)查询哪个员工的manager_id = (1)
+SELECT last_name, salary
+FROM employees
+WHERE manager_id IN(
+	SELECT employee_id
+	FROM employees
+	WHERE last_name = 'k_ing'
+);
