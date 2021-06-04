@@ -12,3 +12,8 @@ FROM stuinfo;
 SELECT COUNT(*), sex
 FROM stuinfo
 GROUP BY sex;
+
+#3. 查询年龄>18的所有学生的姓名和年级名称
+SELECT name, gradeName
+FROM stuinfo
+WHERE age > 18;
