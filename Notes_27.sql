@@ -104,3 +104,8 @@ char		char(M)		固定长度的字符		比较耗费		高
 varchar		varchar(M)	可变长度的字符		比较节省		低
 						(不可以省略)
 */
+
+CREATE TABLE tab_char(
+	c1 ENUM('a', 'b', 'c')
+);
+
