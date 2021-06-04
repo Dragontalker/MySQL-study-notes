@@ -68,3 +68,12 @@ WHERE department_id IN(
 SELECT DISTINCT department_id
 FROM departments
 WHERE location_id = 1700;
+
+#(2)查询部门号=(1)中的任意一个的员工号
+SELECT employee_id
+FROM employees
+WHERE department_id = ANY(
+	SELECT DISTINCT department_id
+	FROM departments
+	WHERE location_id = 1700
+);
