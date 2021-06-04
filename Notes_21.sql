@@ -56,3 +56,14 @@ WHERE d.department_id = (
 		) ag_dep
 	)
 );
+
+#更简单的方式: limit
+SELECT d.*
+FROM departments AS d
+WHERE d.department_id = (
+	SELECT department_id
+	FROM employees
+	GROUP BY department_id
+	ORDER BY AVG(salary)
+    LIMIT 1
+);
