@@ -100,3 +100,10 @@ WHERE manager_id IN(
 SELECT MAX(salary)
 FROM employees;
 
+#(2)查询工资=(1)的姓.名
+SELECT CONCAT(first_name, '.', last_name) '姓.名'
+FROM employees
+WHERE salary = (
+	SELECT MAX(salary)
+	FROM employees
+);
