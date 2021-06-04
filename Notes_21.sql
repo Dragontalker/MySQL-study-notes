@@ -67,3 +67,12 @@ WHERE d.department_id = (
 	ORDER BY AVG(salary)
     LIMIT 1
 );
+
+#3. 查询平均工资最低的部门信息和该部门的平均工资
+
+#(1)查询平均工资最低的部门
+SELECT department_id
+FROM employees
+GROUP BY department_id
+ORDER BY AVG(salary)
+LIMIT 1;
