@@ -65,3 +65,7 @@ WHERE u.userId = 'Bbiri';
 #8. 删除所有数据
 DELETE FROM my_employees;
 DELETE FROM users;
+
+#9. 检查所作的修正
+SELECT * FROM my_employees;
+SELECT * FROM users;
