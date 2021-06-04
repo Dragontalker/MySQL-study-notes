@@ -25,4 +25,8 @@ VALUES (14, '金星', '女', '1990-4-23', '1388888888', 9);
 
 #3.列的顺序是否可以调换
 INSERT INTO beauty(NAME, sex, id, phone)
-VALUES('蒋欣', '女', 110, 160);
+VALUES('蒋欣', '女', 110, 16);
+
+#4.列数和值的个数必须一致
+INSERT INTO beauty(NAME, sex, id, phone, boyfriend_id)
+VALUES('关晓彤', '女', 120, 17);
