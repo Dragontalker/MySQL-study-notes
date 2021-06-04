@@ -107,3 +107,12 @@ WHERE NAME LIKE '唐%';
 UPDATE boys
 SET boyname = '张飞', usercp = 10
 WHERE id = 2;
+
+#2. 修改多表的记录
+
+#案例1: 修改张无忌的女朋友的手机号为114
+UPDATE boys AS b
+INNER JOIN beauty AS b
+ON bo.id = b.boyfriend_id
+SET b.phone = '114'
+WHERE bo.boyName = '张无忌';
