@@ -110,3 +110,8 @@ VALUES
 CREATE TABLE copy LIKE author;
 SELECT * FROM author;
 SELECT * FROM copy;
+
+#(2)复制表的结构+数据
+CREATE TABLE copy2
+SELECT * FROM author;
+SELECT * FROM copy2;
