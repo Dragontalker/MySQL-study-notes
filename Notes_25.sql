@@ -49,3 +49,10 @@ CREATE TABLE book (
     authorId INT, #作者
     publishDate DATETIME #出版日期
 );
+
+#案例: 创建表author
+CREATE TABLE author(
+	id INT,
+    au_name VARCHAR(20),
+    nation VARCHAR(10)
+);
