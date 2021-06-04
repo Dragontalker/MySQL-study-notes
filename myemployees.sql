@@ -99,3 +99,9 @@ CREATE TABLE my_employees(
     userId VARCHAR(10),
     salary DOUBLE(10, 2)
 );
+
+CREATE TABLE users(
+	id INT,
+    userId VARCHAR(10),
+    department_id INT
+);
