@@ -18,3 +18,11 @@ WHERE salary = (
 SELECT AVG(salary), department_id
 FROM employees
 GROUP BY department_id;
+
+#(2)查询(1)结果上的最低平均工资
+SELECT MIN(ag)
+FROM (
+	SELECT AVG(salary) AS ag, department_id
+	FROM employees
+	GROUP BY department_id
+) ag_dep;
