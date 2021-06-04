@@ -113,3 +113,8 @@ WHERE job_id = (
 #(1)查询平均工资
 SELECT AVG(salary)
 FROM employees;
+
+#(2)查询每个部门的平均工资
+SELECT AVG(salary), department_id
+FROM employees
+GROUP BY department_id;
