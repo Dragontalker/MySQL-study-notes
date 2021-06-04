@@ -79,3 +79,9 @@ DESC tab_float;
 
 INSERT INTO tab_float VALUES(123.45, 123.45, 123.45);
 INSERT INTO tab_float VALUES(1523.45, 1523.45, 1523.45);
+
+#原则
+
+/*
+所选择的类型越简单越好, 而且能保存数值的类型越小越好
+*/
