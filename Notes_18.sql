@@ -93,3 +93,10 @@ WHERE manager_id IN(
 	FROM employees
 	WHERE last_name = 'k_ing'
 );
+
+#7. 查询工资最高的员工的姓名, 要求first_name和last_name显示为一列, 列名为姓.名
+
+#(1)查询最高工资
+SELECT MAX(salary)
+FROM employees;
+
