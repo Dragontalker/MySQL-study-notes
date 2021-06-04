@@ -19,3 +19,10 @@ FROM stuinfo AS s
 INNER JOIN grade AS g
 On s.gradeId = g.id
 WHERE age > 18;
+
+#4. 查询哪个年级的最小年龄>20岁
+
+#(1)查询每个年级的最小年龄
+SELECT MIN(age), gradeId
+FROM stuinfo
+GROUP BY gradeId;
