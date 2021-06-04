@@ -64,7 +64,7 @@ DESC book_author;
 
 /*
 alter table 表名
-add|drop|modify|change column
+add|drop|modify|change column 列名 [列类型 约束]
 */
 
 #(1)修改列名
