@@ -37,3 +37,7 @@ DROP TABLE IF EXISTS emp5;
 #7. 将表employees2重命名为emp5
 ALTER TABLE employees2
 RENAME TO emp5;
+
+#8. 在表dept和emp5中添加新列test_column, 并检查所有的操作
+ALTER TABLE emp5
+ADD COLUMN test_column INT;
