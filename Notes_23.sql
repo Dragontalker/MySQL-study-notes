@@ -163,3 +163,8 @@ WHERE phone LIKE '%9';
 
 #案例2: 多表的删除
 #案例: 删除张无忌的女朋友的信息
+DELETE b
+FROM beauty AS b
+INNER JOIN boys AS bo
+ON b.boyfriend_id = bo.id
+WHERE bo.boyName = '张无忌';
