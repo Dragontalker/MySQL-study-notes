@@ -136,6 +136,13 @@ delete from 表名 where 筛选条件
 
 2. 多表的删除[补充]
 
+sql92语法:
+delete 表1的别名, 表2的别名
+FROM 表1 别民, 表2, 别名
+WHERE 连接条件
+AND 筛选条件;
+
+
 方式二: truncate
 语法: truncate table 表名;
 */
@@ -147,3 +154,6 @@ delete from 表名 where 筛选条件
 #案例1: 删除手机号以9结尾的女生信息
 DELETE FROM beauty
 WHERE phone LIKE '%9';
+
+#案例2: 多表的删除
+#案例: 删除张无忌的女朋友的信息
