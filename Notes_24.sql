@@ -44,3 +44,8 @@ VALUES
     (3, 'Bbiri', 20),
     (4, 'Cnewman', 30),
     (5, 'Aropebur', 40);
+    
+#5. 将3号员工的last_name修改为"drelxer"
+UPDATE my_employees
+SET last_name = 'drelxer'
+WHERE id = 3;
