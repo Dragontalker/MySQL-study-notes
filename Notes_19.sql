@@ -25,3 +25,8 @@ LIMIT 0, 5;
 SELECT *
 FROM employees
 LIMIT 5;
+
+#案例2: 查询第11条到第25条
+SELECT *
+FROM employees
+LIMIT 10, 15;
