@@ -53,5 +53,19 @@ double(M, D)
 dec(M, D)
 decimal(M, D)
 
+特点:
+(1)M和D
 
 */
+
+#测试M和D
+CREATE TABLE tab_float(
+	f1 FLOAT(5, 2),
+    f2 DOUBLE(5, 2),
+    f3 DECIMAL(5, 2)
+);
+
+SELECT * FROM tab_float;
+
+INSERT INTO tab_float VALUES(123.45, 123.45, 123.45);
+
