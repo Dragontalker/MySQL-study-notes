@@ -87,3 +87,12 @@ WHERE department_id = (
 	ORDER BY AVG(salary)
 	LIMIT 1
 );
+
+#4. 查询平均工资最高的job信息
+
+#(1)查询每个job的平均工资
+SELECT AVG(salary), job_id
+FROM employees
+GROUP BY job_id
+ORDER BY AVG(salary) DESC
+LIMIT 1;
