@@ -30,3 +30,6 @@ MODIFY COLUMN last_name VARCHAR(50);
 #5. 根据表employees创建employees2
 CREATE TABLE employees2
 LIKE myemployees.employees;
+
+#6. 删除表emp5
+DROP TABLE IF EXISTS emp5;
