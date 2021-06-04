@@ -26,11 +26,15 @@ bigint (5 bytes)
 */
 
 #1. 如何设置无符号和有符号
+DROP TABLE IF EXISTS tab_int;
 CREATE TABLE tab_int(
-	t1 INT
+	t1 INT,
+    t2 INT UNSIGNED
 );
 
 DESC tab_int;
 
 INSERT INTO tab_int
-VALUES (-123456);
+VALUES (-123456, -123456);
+
+SELECT * FROM tab_int;
