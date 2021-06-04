@@ -131,6 +131,16 @@ INSERT INTO tab_set VALUES ('a');
 INSERT INTO tab_set VALUES ('a,b,c');
 
 #四、日期型
+
+/*
+分类:
+date只保存日期
+time只保存时间
+year只保存年
+
+datetime保存日期+时间
+timestamp保存日期+时间
+*/
 CREATE TABLE tab_date(
 	t1 DATETIME,
     t2 TIMESTAMP
