@@ -43,3 +43,14 @@ GROUP BY 分组条件
 HAVING 分组后的筛选
 ORDER BY 排序列表
 LIMIT 偏移, 条目数;
+
+#执行顺序
+#1. FROM
+#2. JOIN 形成笛卡尔乘积
+#3. ON	进行筛选
+#4. WHERE 进一步筛选
+#5. GROUP BY
+#6. HAVING
+#7. SELECT
+#8. ORDER BY
+#9. LIMIT
