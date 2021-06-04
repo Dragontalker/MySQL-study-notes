@@ -32,3 +32,14 @@ SELECT MIN(age), gradeId
 FROM stuinfo
 GROUP BY gradeId
 HAVING MIN(age) > 20;
+
+#5. 尝试说出查询语句中涉及到的所有的关键字, 以及执行先后顺序
+SELECT 查询列表
+FROM 表1
+[JOIN type] JOIN 表2
+ON 连接条件
+WHERE 筛选条件
+GROUP BY 分组条件
+HAVING 分组后的筛选
+ORDER BY 排序列表
+LIMIT 偏移, 条目数;
