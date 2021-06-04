@@ -93,6 +93,10 @@ INSERT INTO tab_float VALUES(1523.45, 1523.45, 1523.45);
 char
 varchar
 
+其他:
+Enum
+Set
+
 较长的文本:
 text
 blob(较大的二进制)
