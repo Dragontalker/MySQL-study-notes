@@ -24,4 +24,7 @@ UNION
 SELECT * FROM employees WHERE department_id > 90;
 
 #案例: 查询中国用户中性别为男的信息以及外国用户中性别为男的用户信息
+SELECT id, cname, csex FROM t_ca WHERE csex = '男'
+UNION
+SELECT t_id, tName, tGender FROM t_ua WHERE tGender='male';
 
