@@ -26,3 +26,9 @@ WHERE age > 18;
 SELECT MIN(age), gradeId
 FROM stuinfo
 GROUP BY gradeId;
+
+#(2)在(1)的结果上进行筛选
+SELECT MIN(age), gradeId
+FROM stuinfo
+GROUP BY gradeId
+HAVING MIN(age) > 20;
