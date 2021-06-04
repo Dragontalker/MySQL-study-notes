@@ -21,4 +21,16 @@ mediumint (3 bytes),
 int/integer (4 bytes), 
 bigint (5 bytes)
 
+特点:
+
 */
+
+#1. 如何设置无符号和有符号
+CREATE TABLE tab_int(
+	t1 INT
+);
+
+DESC tab_int;
+
+INSERT INTO tab_int
+VALUES (-123456);
