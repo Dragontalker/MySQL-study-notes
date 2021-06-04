@@ -56,3 +56,10 @@ CREATE TABLE author(
     au_name VARCHAR(20),
     nation VARCHAR(10)
 );
+
+#2. 表的修改
+#(1)修改列名
+#(2)修改列的类型或约束
+#(3)添加新的列
+#(4)删除列
+#(5)修改表名
