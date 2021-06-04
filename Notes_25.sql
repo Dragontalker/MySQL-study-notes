@@ -115,3 +115,11 @@ SELECT * FROM copy;
 CREATE TABLE copy2
 SELECT * FROM author;
 SELECT * FROM copy2;
+
+#(3)只复制部分数据
+CREATE TABLE copy3
+SELECT id, au_name
+FROM author
+WHERE nation = '中国';
+
+SELECT * FROM copy3;
