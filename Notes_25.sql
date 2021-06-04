@@ -57,12 +57,21 @@ CREATE TABLE author(
     nation VARCHAR(10)
 );
 
+DESC book;
+DESC author;
+
 #2. 表的修改
 #(1)修改列名
 ALTER TABLE book
 CHANGE COLUMN publishDate pubDate DATETIME;
 
 #(2)修改列的类型或约束
+ALTER TABLE book
+MODIFY COLUMN pubDate TIMESTAMP;
+
 #(3)添加新的列
+ALTER TABLE author
+ADD COLUMN annual DOUBLE;
+
 #(4)删除列
 #(5)修改表名
