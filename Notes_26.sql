@@ -1,0 +1,6 @@
+#1. 创建表dept1
+DROP TABLE IF EXISTS dept1;
+CREATE TABLE dept1(
+	id INT(7),
+    NAME VARCHAR(25)
+);
