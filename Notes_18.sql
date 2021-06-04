@@ -45,3 +45,10 @@ INNER JOIN (
 ) AS ag_dep
 ON e.department_id = ag_dep.department_id
 WHERE salary > ag_dep.ag;
+
+#4. 查询和姓名中包含字母u的员工在相同部门的员工的员工号和姓名
+
+#(1)查询姓名中包含字母u的员工的部门
+SELECT DISTINCT department_id
+FROM employees
+WHERE last_name LIKE '%u%';
