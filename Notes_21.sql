@@ -118,3 +118,12 @@ FROM employees;
 SELECT AVG(salary), department_id
 FROM employees
 GROUP BY department_id;
+
+#(3)筛选(2)结果集, 满足平均工资>(1)
+SELECT AVG(salary), department_id
+FROM employees
+GROUP BY department_id
+HAVING AVG(salary) > (
+	SELECT AVG(salary)
+	FROM employees
+);
