@@ -60,4 +60,9 @@ VALUES
 2. 方式一支持子查询, 方式二不支持
 INSERT INTO beauty (id, NAME, phone)
 SELECT 26, '宋茜', '1188892312';
+
+INSERT INTO beauty (id, NAME, phone)
+SELECT id, boyname, phone
+FROM boys
+WHERE id < 3;
 */
