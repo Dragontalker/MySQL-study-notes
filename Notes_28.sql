@@ -70,7 +70,7 @@ SHOW INDEX FROM stuinfo;
 
 /*
 语法: 在各个字段的最下面
-constraint 约束名 约束类型(字段名)
+[constraint 约束名] 约束类型(字段名)
 */
 
 DROP TABLE IF EXISTS stuinfo;
@@ -82,9 +82,9 @@ CREATE TABLE stuinfo(
     age INT, 
     majorId INT,
     
-	CONSTRAINT pk PRIMARY KEY(id), #主键
-    CONSTRAINT uq UNIQUE(seat), #唯一
-    CONSTRAINT fk_stuinfo_major FOREIGN KEY(majorId) REFERENCES major(id)
+	PRIMARY KEY(id), #主键
+    UNIQUE(seat), #唯一
+    FOREIGN KEY(majorId) REFERENCES major(id)
 );
 
 SHOW INDEX FROM stuinfo;
