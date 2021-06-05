@@ -64,4 +64,16 @@ INSERT INTO test_account(username, balance)
 VALUES
 	('张无忌', 1000),
     ('赵敏', 1000);
+    
+SELECT * FROM test_account;
 
+#开始事务
+SET autocommit=0;
+START TRANSACTION;
+#编写一组事务的语句
+UPDATE test_account SET balance = 500 WHERE username='张无忌';
+UPDATE test_account SET balance = 1500 WHERE username='赵敏';
+#结束事务
+COMMIT;
+
+SELECT * FROM test_account;
