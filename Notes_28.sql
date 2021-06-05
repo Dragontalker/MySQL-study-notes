@@ -116,3 +116,18 @@ CREATE TABLE IF NOT EXISTS stuinfo(
     majorid INT, 
     CONSTRAINT fk_stuinfo_major FOREIGN KEY(majorid) REFERENCES major(id)
 );
+
+#二、修改表时添加约束
+
+#1. 添加非空约束
+CREATE TABLE stuinfo(
+	id INT,
+    stuName VARCHAR(20),
+    gender CHAR(1),
+    seat INT,
+    age INT, 
+    majorId INT
+);
+
+ALTER TABLE stuinfo
+MODIFY COLUMN stuname VARCHAR(20) NOT NULL;
