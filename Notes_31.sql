@@ -50,4 +50,18 @@ rollback; 回滚事务
 SHOW ENGINES;
 
 #演示事务的使用步骤
+USE test;
+
+DROP TABLE IF EXISTS test_account;
+
+CREATE TABLE test_account(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(20),
+    balance DOUBLE
+);
+
+INSERT INTO test_account(username, balance)
+VALUES
+	('张无忌', 1000),
+    ('赵敏', 1000);
 
