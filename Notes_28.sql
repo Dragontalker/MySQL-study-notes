@@ -33,3 +33,18 @@ CREATE TABLE 表名(
     表级约束
 );
 */
+
+#一、创建表时添加约束
+
+#1. 添加列级约束
+CREATE DATABASE students;
+USE students;
+
+CREATE TABLE stuinfo(
+	id INT PRIMARY KEY, #主键
+    stuName VARCHAR(20) NOT NULL, #非空
+    gender CHAR(1), #CHECK(gender IN ('男','女'), 检查约束
+    seat INT UNIQUE, #唯一
+    age INT DEFAULT 18, #默认约束
+    majorId INT
+);
