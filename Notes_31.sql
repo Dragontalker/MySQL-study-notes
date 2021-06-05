@@ -37,7 +37,14 @@ ACID
 set autocommit = 0;
 start tranction; 可选的
 
+步骤2: 编写事务中的sql语句(select, inser, update, delete)
+语句1;
+语句2;
+...
 
+步骤3: 结束事务
+commit; 提交事务
+rollback; 回滚事务
 */
 
 SHOW ENGINES;
