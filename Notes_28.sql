@@ -119,7 +119,6 @@ CREATE TABLE IF NOT EXISTS stuinfo(
 
 #二、修改表时添加约束
 
-#1. 添加非空约束
 CREATE TABLE stuinfo(
 	id INT,
     stuName VARCHAR(20),
@@ -129,5 +128,10 @@ CREATE TABLE stuinfo(
     majorId INT
 );
 
+#1. 添加非空约束
 ALTER TABLE stuinfo
 MODIFY COLUMN stuname VARCHAR(20) NOT NULL;
+
+#2. 添加默认约束
+ALTER TABLE stuinfo
+MODIFY COLUMN age INT DEFAULT 18;
