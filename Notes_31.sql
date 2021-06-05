@@ -100,7 +100,9 @@ SELECT * FROM test_account;
 #3. 演示savepoint的使用
 SET autocommit=0;
 START TRANSACTION;
-DELETE FROM test_account WHERE id=25;
+DELETE FROM test_account WHERE id=1;
 SAVEPOINT a; #设置保存点
-DELETE FROM test_account WHERE id=28;
+DELETE FROM test_account WHERE id=2;
 ROLLBACK TO a; #回滚到保存点
+
+SELECT * FROM test_account;
