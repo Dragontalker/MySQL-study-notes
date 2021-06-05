@@ -46,6 +46,8 @@ start tranction; 可选的
 commit; 提交事务
 rollback; 回滚事务
 
+savepoint 节点名; 设置保存点
+
 事务的隔离级别:
 	1. read uncommited: 出现脏读, 幻读, 不可重复读
     2. read commited： 幻读, 不可以重复读
@@ -94,3 +96,11 @@ UPDATE test_account SET balance = 1000 WHERE username='赵敏';
 COMMIT;
 
 SELECT * FROM test_account;
+
+#3. 演示savepoint的使用
+SET autocommit=0;
+START TRANSACTION;
+DELETE FROM test_account WHERE id=25;
+SAVEPOINT a; #设置保存点
+DELETE FROM test_account WHERE id=28;
+ROLLBACK TO a; #回滚到保存点
