@@ -88,3 +88,14 @@ CREATE TABLE stuinfo(
 );
 
 SHOW INDEX FROM stuinfo;
+
+#通用的写法:
+CREATE TABLE IF NOT EXISTS stuinfo(
+	id INT PRIMARY KEY,
+    stuname VARCHAR(20) NOT NULL,
+    sex CHAR(1),
+    age INT DEFAULT 18,
+    seat INT UNIQUE,
+    majorid INT, 
+    CONSTRAINT fk_stuinfo_major FOREIGN KEY(majorid) REFERENCES major(id)
+);
