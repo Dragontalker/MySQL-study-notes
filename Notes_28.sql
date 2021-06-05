@@ -119,6 +119,14 @@ CREATE TABLE IF NOT EXISTS stuinfo(
 
 #二、修改表时添加约束
 
+/*
+1. 添加列级约束
+alter table 表名 modify column 字段名 字段类型 新约束
+
+2. 添加表级约束
+alter table 表名 add [constraint 约束名] 约束类型(字段名) [外键的引用]
+*/
+
 CREATE TABLE stuinfo(
 	id INT,
     stuName VARCHAR(20),
