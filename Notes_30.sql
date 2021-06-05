@@ -20,3 +20,7 @@ VALUES
     ('lily');
     
 SELECT * FROM tab_identity;
+
+SHOW VARIABLES LIKE '%auto_increment%';
+
+SET auto_increment = 3;
