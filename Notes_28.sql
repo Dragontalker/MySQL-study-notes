@@ -176,3 +176,7 @@ MODIFY COLUMN stuname VARCHAR(20) NULL;
 #2. 删除默认约束
 ALTER TABLE stuinfo
 MODIFY COLUMN age INT;
+
+#3. 删除主键
+ALTER TABLE stuinfo
+DROP PRIMARY KEY;
