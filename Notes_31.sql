@@ -49,3 +49,5 @@ rollback; 回滚事务
 
 SHOW ENGINES;
 
+#演示事务的使用步骤
+
