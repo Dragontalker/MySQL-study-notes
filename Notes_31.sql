@@ -55,6 +55,12 @@ rollback; 回滚事务
     mysql中默认第三个隔离级别, repeatable read
     oracle中默认第二个隔离级别, read commited
     
+查看隔离级别
+select @@tx_isolation;
+
+设置隔离级别
+set session|global transaction isolation level 隔离级别;
+    
 */
 
 SHOW ENGINES;
