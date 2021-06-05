@@ -154,3 +154,7 @@ MODIFY COLUMN seat INT UNIQUE;
 #(2)表级约束
 ALTER TABLE stuinfo
 ADD UNIQUE(seat);
+
+#5. 添加外键
+ALTER TABLE stuinfo
+ADD CONSTRAINT fk_stuinfo_major FOREIGN KEY fk_majorid REFERENCES major(id);
