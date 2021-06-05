@@ -29,4 +29,8 @@ SELECT * FROM tab_identity;
 
 SHOW VARIABLES LIKE '%auto_increment%';
 
-SET auto_increment = 3;
+SET auto_increment_increment = 3;
+
+#二、修改表时设置标识列
+ALTER TABLE tab_identity
+MODIFY COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
