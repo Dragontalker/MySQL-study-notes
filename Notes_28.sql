@@ -34,9 +34,9 @@ CREATE TABLE 表名(
 );
 
 主键和唯一的大对比:
-			保证唯一性	是否允许为空
-    主键		Yes			No
-    唯一		Yes			No
+			保证唯一性	是否允许为空		同个表中同时存在多个
+    主键		Yes			No				No
+    唯一		Yes			Yes				Yes
     
     insert into major values(1, 'java');
     insert into major values(2, 'h2');
