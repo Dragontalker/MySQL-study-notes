@@ -170,4 +170,9 @@ ADD CONSTRAINT fk_stuinfo_major FOREIGN KEY fk_majorid REFERENCES major(id);
 #三、修改表时删除约束
 
 #1. 删除非空约束
-ALTER TABLE stuinfo MODIFY COLUMN stuname VARCHAR(20) NULL;
+ALTER TABLE stuinfo 
+MODIFY COLUMN stuname VARCHAR(20) NULL;
+
+#2. 删除默认约束
+ALTER TABLE stuinfo
+MODIFY COLUMN age INT;
