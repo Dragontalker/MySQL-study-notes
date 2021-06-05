@@ -45,6 +45,16 @@ start tranction; 可选的
 步骤3: 结束事务
 commit; 提交事务
 rollback; 回滚事务
+
+事务的隔离级别:
+	1. read uncommited: 出现脏读, 幻读, 不可重复读
+    2. read commited： 幻读, 不可以重复读
+    3. repeatable read: 幻读
+    4. serializable: 不会有问题, 类似线程锁
+    
+    mysql中默认第三个隔离级别, repeatable read
+    oracle中默认第二个隔离级别, read commited
+    
 */
 
 SHOW ENGINES;
