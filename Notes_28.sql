@@ -166,3 +166,8 @@ ADD UNIQUE(seat);
 #5. 添加外键
 ALTER TABLE stuinfo
 ADD CONSTRAINT fk_stuinfo_major FOREIGN KEY fk_majorid REFERENCES major(id);
+
+#三、修改表时删除约束
+
+#1. 删除非空约束
+ALTER TABLE stuinfo MODIFY COLUMN stuname VARCHAR(20) NULL;
