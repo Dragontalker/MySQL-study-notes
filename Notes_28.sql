@@ -150,3 +150,7 @@ ADD PRIMARY KEY(id);
 #(1)列级约束
 ALTER TABLE stuinfo
 MODIFY COLUMN seat INT UNIQUE;
+
+#(2)表级约束
+ALTER TABLE stuinfo
+ADD UNIQUE(seat);
