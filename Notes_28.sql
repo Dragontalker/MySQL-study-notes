@@ -65,3 +65,17 @@ CREATE TABLE major(
 DESC stuinfo;
 
 SHOW INDEX FROM stuinfo;
+
+#2. 添加表级约束
+DROP TABLE IF EXISTS stuinfo;
+CREATE TABLE stuinfo(
+	id INT,
+    stuName VARCHAR(20),
+    gender CHAR(1),
+    seat INT,
+    age INT, 
+    majorId INT,
+    
+	CONSTRAINT pk PRIMARY KEY(id), #主键
+    CONSTRAINT uq UNIQUE(seat) #唯一
+);
