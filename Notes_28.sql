@@ -34,9 +34,9 @@ CREATE TABLE 表名(
 );
 
 主键和唯一的大对比:
-			保证唯一性	是否允许为空		同个表中同时存在多个
-    主键		Yes			No				No
-    唯一		Yes			Yes				Yes
+			保证唯一性	是否允许为空		同个表中同时存在多个	是否允许组合
+    主键		Yes			No				No					Yes, 但不推荐
+    唯一		Yes			Yes				Yes					Yes, 但不推荐
     
     insert into major values(1, 'java');
     insert into major values(2, 'h2');
@@ -92,7 +92,7 @@ CREATE TABLE stuinfo(
     age INT, 
     majorId INT,
     
-	PRIMARY KEY(id), #主键
+	PRIMARY KEY(id, stuname), #主键
     UNIQUE(seat), #唯一
     FOREIGN KEY(majorId) REFERENCES major(id)
 );
