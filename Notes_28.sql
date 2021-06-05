@@ -42,6 +42,11 @@ CREATE TABLE 表名(
     insert into major values(2, 'h2');
     insert into stuinfo values(1, 'john', '男', null, 19, 1);
     insert into stuinfo values(2, 'lily', '女', null, 19, 2);
+    
+外键:
+	1. 要求在从表设置外键关系
+    2. 从表的外键列的类型和主教的关联列的类型要求一致或兼容, 名称无要求
+    3. 主表中的关联列必须时一个key(一般是主键, 或唯一)
 */
 
 #一、创建表时添加约束
