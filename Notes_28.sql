@@ -185,3 +185,6 @@ DROP PRIMARY KEY;
 ALTER TABLE stuinfo
 DROP INDEX seat;
 
+#5. 删除外键
+ALTER TABLE stuinfo
+DROP FOREIGN KEY fk_stuinfo_majorid;
