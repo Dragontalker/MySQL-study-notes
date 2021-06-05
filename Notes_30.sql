@@ -34,3 +34,7 @@ SET auto_increment_increment = 3;
 #二、修改表时设置标识列
 ALTER TABLE tab_identity
 MODIFY COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
+
+#三、修改表时删除标识列
+ALTER TABLE tab_identity
+MODIFY COLUMN id INT;
