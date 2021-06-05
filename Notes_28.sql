@@ -180,3 +180,8 @@ MODIFY COLUMN age INT;
 #3. 删除主键
 ALTER TABLE stuinfo
 DROP PRIMARY KEY;
+
+#4. 删除唯一
+ALTER TABLE stuinfo
+DROP INDEX seat;
+
