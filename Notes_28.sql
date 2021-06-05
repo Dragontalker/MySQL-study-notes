@@ -32,6 +32,16 @@ CREATE TABLE 表名(
 	字段名 字段类型 列级约束,
     表级约束
 );
+
+主键和唯一的大对比:
+			保证唯一性	是否允许为空
+    主键		Yes			No
+    唯一		Yes			No
+    
+    insert into major values(1, 'java');
+    insert into major values(2, 'h2');
+    insert into stuinfo values(1, 'john', '男', null, 19, 1);
+    insert into stuinfo values(2, 'lily', '女', null, 19, 2);
 */
 
 #一、创建表时添加约束
