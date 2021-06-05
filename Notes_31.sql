@@ -12,6 +12,14 @@ Transactional Control Lanaguage 事务控制语言
 
 update 表 set 张三丰的余额=500 where name='张三丰';
 update 表 set 郭襄的余额=1500 where name='郭襄';
+
+事务的特性:
+ACID
+	1. 原子性: 一个事务不可再分割, 要么都执行要么都不执行
+    2. 一致性: 一个事务执行会是数据从一个一致状态切换到另一个一致状态
+    3. 隔离性: 一个事务的执行不受其他事务的干扰
+    4. 持久性: 一个事务一旦提交, 则会永久的改变数据库的数据
 */
 
 SHOW ENGINES;
+
