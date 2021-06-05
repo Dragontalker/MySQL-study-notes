@@ -7,10 +7,16 @@
 */
 
 #一、创建表时设置标识列
+DROP TABLE IF EXISTS tab_identity;
 CREATE TABLE tab_identity(
-	id INT PRIMARY KEY,
+	id INT PRIMARY KEY AUTO_INCREMENT,
     NAME VARCHAR(20)
 );
 
-INSERT INTO tab_identity
-VALUES(1, 'john');
+INSERT INTO tab_identity (NAME)
+VALUES
+	('john'),
+    ('tom'),
+    ('lily');
+    
+SELECT * FROM tab_identity;
