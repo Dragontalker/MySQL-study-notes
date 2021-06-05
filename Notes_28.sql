@@ -36,6 +36,14 @@ CREATE TABLE 表名(
 
 #一、创建表时添加约束
 
+/*
+语法:
+
+直接在字段名和类型后面追加 约束类型 即可
+
+只支持: 默认, 非空, 主键, 唯一
+*/
+
 #1. 添加列级约束
 CREATE DATABASE students;
 USE students;
@@ -53,3 +61,7 @@ CREATE TABLE major(
 	id INT PRIMARY KEY,
     majorName VARCHAR(20) NOT NULL
 );
+
+DESC stuinfo;
+
+SHOW INDEX FROM stuinfo;
