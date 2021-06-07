@@ -139,3 +139,8 @@ SELECT * FROM myv1;
 #1. 插入
 INSERT INTO myv1
 VALUES ('张飞', 'zf@qq.com');
+
+#2. 修改
+UPDATE myv1
+SET last_name = '张无忌'
+WHERE last_name = '张飞';
