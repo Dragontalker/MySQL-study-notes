@@ -85,12 +85,15 @@ CALL myp2('柳岩')$
 CREATE PROCEDURE myp3(IN username VARCHAR(20), IN PASSWORD VARCHAR(20))
 BEGIN
 	#声明并初始化
-	DECLARE result VARCHAR(20) DEFAULT '';
+	DECLARE result INT DEFAULT '';
     #赋值
 	SELECT COUNT(*) INTO result
     FROM admin
     WHERE admin.username = username
     AND admin.PASSWORD = PASSWORD;
     #使用
-    SELECT result;
+    SELECT IF(result > 0, '成功', '失败');
 END $
+
+#调用
+CALL myp3('张飞', '8888')
