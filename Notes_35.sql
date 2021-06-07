@@ -84,3 +84,9 @@ SET SESSION transaction_isolation = 'read-commited';
 2. 赋值
 3. 使用(查看、比较、运算等)
 */
+
+#1. 用户变量
+/*
+作用域: 针对于当前会话(连接)有效, 同于会话变量的作用域
+*/
+
