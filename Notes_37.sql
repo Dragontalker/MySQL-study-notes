@@ -13,3 +13,9 @@ BEGIN
     FROM beauty AS b
     WHERE b.id = id;
 END $
+
+#三、创建存储过程或函数实现传入两个女生生日, 返回大小
+CREATE PROCEDURE test_pro3(IN birth1 DATETIME, IN birth2 DATETIME, OUT result INT)
+BEGIN
+	SELECT DATEDIFF(birth1, birth2) INTO result;
+END $
