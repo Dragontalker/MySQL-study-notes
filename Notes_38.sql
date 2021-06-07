@@ -52,3 +52,14 @@ BEGIN
     LIMIT 1;
     RETURN result;
 END $
+
+#案例2: 根据部门名, 返回该部门的平均工资
+CREATE FUNCTION myf3(deptName VARCHAR(20)) RETURNS DOUBLE
+BEGIN
+	DECLARE result DOUBLE DEFAULT 0;
+    SELECT AVG(salary) INTO result
+    FROM employees AS e
+    INNER JOIN departments AS d
+    ON e.department_id = d.department_id
+    WHERE d.department_name = deptName;
+END $
