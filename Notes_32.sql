@@ -48,3 +48,12 @@ ON j.job_id = e.job_id;
 SELECT *
 FROM myv1
 WHERE last_name LIKE '%a%';
+
+#2. 查询各部门的平均工资级别
+#(1)创建视图查看每个部门的平均工资
+CREATE VIEW myv2
+AS
+SELECT AVG(salary) AS ag, department_id
+FROM employees
+GROUP BY department_id;
+
