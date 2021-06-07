@@ -73,3 +73,14 @@ SET @@session.transaction_isolation = 'read-uncommited';
 
 #方式2:
 SET SESSION transaction_isolation = 'read-commited';
+
+#二、自定义变量
+
+/*
+说明: 变量是用户自定义的, 不是由系统定义的
+
+使用步骤:
+1. 声明
+2. 赋值
+3. 使用(查看、比较、运算等)
+*/
