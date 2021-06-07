@@ -115,7 +115,7 @@ CALL myp5('小昭', @bName);
 SELECT @bName;
 
 #案例2: 根据女神名, 返回对应的男神名和男神魅力值
-CREATE PROCEDURE myp6(IN beautyName VARCHAR(20), OUT boyName VARCHAR(20), OUT userCP INT)
+CREATE PROCEDURE myp7(IN beautyName VARCHAR(20), OUT boyName VARCHAR(20), OUT userCP INT)
 BEGIN
 	SELECT bo.boyName, bo.userCP INTO boyName, userCP
     FROM boys AS bo
@@ -125,6 +125,14 @@ BEGIN
 END $
 
 #调用
-CALL myp5('小昭', @bName, @usercp);
+CALL myp7('小昭', @bName, @usercp);
 SELECT @bName;
 SELECT @usercp;
+
+#4. 创建带inout模式参数的存储过程
+#案例1: 传入a和b两个值, 最终a和b都翻倍并返回
+CREATE PROCEDURE myp8(INOUT a INT, INOUT b INT)
+BEGIN
+	SET a = a * 2;
+    SET b = b * 2;
+END $
