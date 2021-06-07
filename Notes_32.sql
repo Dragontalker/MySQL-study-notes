@@ -159,3 +159,11 @@ WHERE last_name = '张无忌';
     - union
     - union all
 */
+
+CREATE OR REPLACE VIEW myv1
+AS
+SELECT MAX(salary) as m, department_id
+FROM employees
+GROUP BY department_id;
+
+SELECT * FROM myv1;
