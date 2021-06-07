@@ -37,3 +37,6 @@ SELECT @@global.admin_port;
 #1. 全局变量
 #(1)查看所有的全局变量
 SHOW GLOBAL VARIABLES;
+
+#(2)查看部分的全局变量
+SHOW GLOBAL VARIABLES LIKE '%char%';
