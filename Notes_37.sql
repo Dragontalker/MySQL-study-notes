@@ -29,7 +29,7 @@ END $
 #五、创建存储过程或函数实现传入女生名称, 返回: 女神 and 男神 格式的字符串
 CREATE PROCEDURE test_pro5(IN beautyName VARCHAR(20), OUT str VARCHAR(50))
 BEGIN
-	SELECT CONCAT(beautyName, ' and ', bo.boyName) INTO str
+	SELECT CONCAT(beautyName, ' and ', IFNULL(bo.boyName, '没有男神T_T')) INTO str
     FROM boys AS bo
     RIGHT JOIN beauty AS b
     ON bo.id = b.boyfriend_id
