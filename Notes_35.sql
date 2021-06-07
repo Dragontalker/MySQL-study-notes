@@ -129,5 +129,11 @@ SELECT @count;
 #DECLARE 变量名 类型;
 #DECLARE 变量名 类型 DEFAULT 值;
 
+#(2)赋值
+#SET @局部变量名=值;
+#SET @局部变量名=值;;
+#SELECT @局部变量名:=值;
 
+#(3)使用
+#SELECT 局部变量名;
 
