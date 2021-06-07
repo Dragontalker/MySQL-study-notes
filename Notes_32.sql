@@ -109,3 +109,9 @@ as
 ALTER VIEW myv3
 AS
 SELECT * FROM myv2;
+
+#三、删除视图
+
+/*
+语法: drop view 视图名1, 视图名2, ...;
+*/
