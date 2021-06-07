@@ -102,3 +102,7 @@ SET SESSION transaction_isolation = 'read-commited';
 #SET @用户变量名=值;;
 #SELECT #SET @用户变量名=值;
 
+#案例:
+SET @name='john';
+SET @name=100;
+
