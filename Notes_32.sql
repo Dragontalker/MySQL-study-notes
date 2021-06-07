@@ -24,3 +24,11 @@ ON s.major_id = m.id;
 
 #使用视图
 SELECT * FROM v1 WHERE s.stuname LIKE '%张';
+
+#一、创建视图
+/*
+语法:
+create view 视图名
+as
+查询语句;
+*/
