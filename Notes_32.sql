@@ -144,3 +144,7 @@ VALUES ('张飞', 'zf@qq.com');
 UPDATE myv1
 SET last_name = '张无忌'
 WHERE last_name = '张飞';
+
+#3. 删除
+DELETE FROM myv1
+WHERE last_name = '张无忌';
