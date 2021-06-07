@@ -35,3 +35,11 @@ BEGIN
     ON bo.id = b.boyfriend_id
     WHERE b.name = beautyName;
 END $
+
+#六、创建存储过程或函数, 根据传入的条目数和其实索引, 查询beauty表的记录
+CREATE PROCEDURE test_pro6(IN size INT, startIndex INT)
+BEGIN
+	SELECT *
+    FROM beauty
+    LIMIT startIndex, size;
+END $
