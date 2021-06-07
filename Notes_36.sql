@@ -97,3 +97,15 @@ END $
 
 #调用
 CALL myp3('张飞', '8888')
+
+#3. 创建带out模式的存储过程
+
+#案例1: 根据女神名, 返回对应的男神名
+CREATE PROCEDURE myp5(IN beautyName VARCHAR(20) OUT boyName VARCHAR(20))
+BEGIN
+	SELECT bo.boyName INTO boyName
+    FROM boys AS bo
+    INNER JOIN beauty AS b
+    ON bo.id = b.boyfriend_id
+    WHERE b.name = beautyName;
+END $
