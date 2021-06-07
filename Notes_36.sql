@@ -50,3 +50,14 @@ INOUT: 该参数既可以作为输入又可以作为输出, 也就是该参数�
 /*
 CALL 存储过程名(实参列表);
 */
+
+#1. 空参列表
+#案例: 插入到admin表中五条记录
+/*
+DELIMITER $
+CREATE PRECEDURE myp1()
+BEGIN
+	INSERT INTO admin(username, password)
+    VALUES('jack', '0000');
+END $
+*/
