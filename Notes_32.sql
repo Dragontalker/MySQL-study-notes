@@ -81,3 +81,10 @@ SELECT d.*, m.ag
 FROM myv3 AS m
 JOIN departments AS d
 ON m.department_id = d.department_id;
+
+#二、视图的修改
+/*
+create or replace view 视图名
+as
+查询语句;
+*/
