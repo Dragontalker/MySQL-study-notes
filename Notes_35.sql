@@ -120,5 +120,14 @@ FROM employees;
 #查看
 SELECT @count;
 
+#2. 局部变量
+/*
+作用域: 仅仅在定义它的begin end中有效
+*/
+
+#(1)声明
+#DECLARE 变量名 类型;
+#DECLARE 变量名 类型 DEFAULT 值;
+
 
 
