@@ -24,3 +24,10 @@ SET autocommit=0;
 INSERT INTO books(bid, bname, price, btypeId)
 VALUES (1, '小李飞刀', 100, 1);
 COMMIT;
+
+#3. 创建视图, 实现查询价格大于100的书名和类型名
+CREATE VIEW myv1
+AS
+SELECT bname, price, btyleID
+FROM books
+WHERE price > 100;
