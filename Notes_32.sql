@@ -68,3 +68,16 @@ SELECT *
 FROM myv2
 ORDER BY ag
 LIMIT 1;
+
+#4. 查询平均工资最低的部门名和工资
+CREATE VIEW myv3
+AS
+SELECT * 
+FROM myv2
+ORDER BY ag
+LIMIT 1;
+
+SELECT d.*, m.ag
+FROM myv3 AS m
+JOIN departments AS d
+ON m.department_id = d.department_id;
