@@ -13,3 +13,11 @@ FROM stuinfo AS s
 INNER JOIN major AS m 
 ON s.major_id = m.id
 WHERE s.stuname LIKE '%张';
+
+#使用视图
+CREATE VIEW v1
+AS
+SELECT stuname, major_name
+FROM stuinfo AS s
+INNER JOIN major AS m
+ON s.major_id = m.id;
