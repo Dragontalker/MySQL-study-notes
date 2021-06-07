@@ -105,3 +105,7 @@ alter view 视图名
 as
 查询语句;
 */
+
+ALTER VIEW myv3
+AS
+SELECT * FROM myv2;
