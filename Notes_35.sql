@@ -19,3 +19,6 @@ SHOW SESSION VARIABLES; #SHOW VARIABLES;
 
 #2. 查看满足条件的部分系统变量
 SHOW GLOBAL VARIABLES LIKE '%admin%';
+
+#3. 查看指定的某个系统变量的值
+SELECT @@admin_port;
