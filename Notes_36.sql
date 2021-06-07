@@ -142,3 +142,7 @@ SET @m = 10$
 SET @n = 20$
 CALL myp8(@m, @n)$
 SELECT @m, @n;
+
+#二、删除存储过程
+#语法: DROP PROCEDURE 存储过程名
+DROP PROCEDURE p1;
