@@ -48,6 +48,7 @@ BEGIN
 	DECLARE result DOUBLE DEFAULT 0;
     SELECT salary INTO result
     FROM employees
-    WHERE last_name = empName;
+    WHERE last_name = empName
+    LIMIT 1;
     RETURN result;
 END $
