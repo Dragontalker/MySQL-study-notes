@@ -27,3 +27,16 @@ return 值;
 #二、调用语法
 #SELECT 函数名(参数列表)
 
+#案例演示
+#1. 无参有返回
+#案例: 返回工资的员工个数
+DELIMITER $
+CREATE FUNCTION myf1() RETURNS INT
+BEGIN
+	DECLARE result INT DEFAULT 0;
+	SELECT COUNT(*) INTO result
+    FROM employees;
+    RETURN result;
+END $
+
+SELECT myf1()$
