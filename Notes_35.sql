@@ -43,3 +43,4 @@ SHOW GLOBAL VARIABLES LIKE '%char%';
 
 #(3)查看指定的全局变量的值
 SELECT @@global.autocommit;
+SELECT @@transaction_isolation;
