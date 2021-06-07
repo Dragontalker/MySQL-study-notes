@@ -84,8 +84,13 @@ CALL myp2('柳岩')$
 #案例2: 创建存储过程实现, 用户是否登录成功
 CREATE PROCEDURE myp3(IN username VARCHAR(20), IN PASSWORD VARCHAR(20))
 BEGIN
-	SELECT COUNT(*) 
+	#声明并初始化
+	DECLARE result VARCHAR(20) DEFAULT '';
+    #赋值
+	SELECT COUNT(*) INTO result
     FROM admin
     WHERE admin.username = username
     AND admin.PASSWORD = PASSWORD;
+    #使用
+    SELECT result;
 END $
