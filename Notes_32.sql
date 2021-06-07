@@ -117,3 +117,8 @@ SELECT * FROM myv2;
 */
 
 DROP VIEW myv1, myv2, myv3;
+
+#四、查看视图
+DESC myv1;
+
+SHOW CREATE VIEW myv1;
