@@ -59,3 +59,7 @@ SET @@global.autocommit = 0;
 #(1)查看所有的会话变量
 SHOW VARIABLES;
 SHOW SESSION VARIABLES;
+
+#(2)查看部分的会话变量
+SHOW VARIABLES LIKE '%char%';
+SHOW SESSION VARIABLES LIKE '%char%';
