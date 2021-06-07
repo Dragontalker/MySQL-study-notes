@@ -70,3 +70,13 @@ SHOW CREATE FUNCTION myf1;
 
 #四、删除函数
 DROP FUNCTION myf3;
+
+#案例:
+#1. 创建函数, 实现传入两个float, 返回二者之和
+DELIMITER $
+CREATE FUNCTION test_fun1(num1 FLOAT, num2 FLOAT) RETURNS FLOAT
+BEGIN
+	DECLARE sum FLOAT DEFUALT 0;
+    SET sum = num1 + num2;
+    RETURN sum;
+END $
