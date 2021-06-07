@@ -61,3 +61,6 @@ BEGIN
     VALUES('jack', '0000');
 END $
 */
+
+#调用
+#CALL myp1()$
