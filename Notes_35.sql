@@ -35,6 +35,9 @@ SELECT @@global.admin_port;
 #如果是全局变量, 则需要加global, 如果是会话级别, 则需要加session, 如果不写, 则默认session
 
 #1. 全局变量
+/*
+作用域: 服务器每次启动将为所有的全局变量赋初始值, 针对于所有的会话(连接)都有效, 但不能跨重启
+*/
 #(1)查看所有的全局变量
 SHOW GLOBAL VARIABLES;
 
