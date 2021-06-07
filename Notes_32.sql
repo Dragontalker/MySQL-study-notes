@@ -32,3 +32,19 @@ create view 视图名
 as
 查询语句;
 */
+
+#1. 查询姓名中包含a字符的员工名、部门名和工种新消息
+#(1)创建
+CREATE VIEW myv1
+AS
+SELECT last_name, department_name, job_title
+FROM employees AS e
+JOIN departments AS d
+ON e.department_id = d.department_id
+JOIN jobs AS j
+ON j.job_id = e.job_id;
+
+#(2)使用
+SELECT *
+FROM myv1
+WHERE last_name LIKE '%a%';
