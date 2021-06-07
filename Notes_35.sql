@@ -50,3 +50,8 @@ SELECT @@transaction_isolation;
 
 #(4)为某个指定的全局变量赋值
 SET @@global.autocommit = 0;
+
+#2. 会话变量
+/*
+作用域: 仅仅针对于当前会话(连接)有效
+*/
