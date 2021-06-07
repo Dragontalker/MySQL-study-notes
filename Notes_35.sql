@@ -90,3 +90,7 @@ SET SESSION transaction_isolation = 'read-commited';
 作用域: 针对于当前会话(连接)有效, 同于会话变量的作用域
 */
 
+#(1)声明并初始化
+#SET @用户变量名=值;
+#SET @用户变量名 := 值;
+
