@@ -146,3 +146,6 @@ SELECT @m, @n;
 #二、删除存储过程
 #语法: DROP PROCEDURE 存储过程名
 DROP PROCEDURE p1;
+
+#三、查看存储过程的信息
+SHOW CREATE PROCEDURE myp2;
