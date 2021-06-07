@@ -63,3 +63,10 @@ SHOW SESSION VARIABLES;
 #(2)查看部分的会话变量
 SHOW VARIABLES LIKE '%char%';
 SHOW SESSION VARIABLES LIKE '%char%';
+
+#(3)查看指定的某个会话变量
+SELECT @@transaction_isolation;
+
+#(4)为某个会话变量赋值
+#方式1:
+SET @@session.transaction_isolation = 'read-uncommited';
