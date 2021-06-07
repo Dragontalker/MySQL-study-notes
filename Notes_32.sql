@@ -6,8 +6,9 @@ mysql5.1版本出现的新特性, 是通过表动态生成的数据
 
 比如: 舞蹈班和普通班的对比
 
-视图		create table
-表		create view
+		创建语法的关键字	是否实际占用物理空间
+视图		create table		没有
+表		create view			占用
 */
 
 #案例: 查询姓张的学生名和专业名
