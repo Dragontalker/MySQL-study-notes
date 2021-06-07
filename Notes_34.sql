@@ -29,5 +29,7 @@ COMMIT;
 CREATE VIEW myv1
 AS
 SELECT bname, price, btyleID
-FROM books
+FROM books AS b
+JOIN bookType AS t
+ON b.btypeId = t.id
 WHERE price > 100;
