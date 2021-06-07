@@ -12,3 +12,7 @@
 #一、系统变量
 #说明: 变量由系统提供, 不是用户定义, 属于服务器层面
 
+#使用的语法
+#1. 查看所有的系统变量
+SHOW GLOBAL VARIABLES;
+SHOW SESSION VARIABLES;
