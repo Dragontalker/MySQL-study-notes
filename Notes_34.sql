@@ -18,3 +18,9 @@ CREATE TABLE books(
     btypeId INT,
     FOREIGN KEY(btypeId) REFERENCES bookType(id)
 );
+
+#2. 开启事务, 向表中插入1行数据, 并结束
+SET autocommit=0;
+INSERT INTO books(bid, bname, price, btypeId)
+VALUES (1, '小李飞刀', 100, 1);
+COMMIT;
