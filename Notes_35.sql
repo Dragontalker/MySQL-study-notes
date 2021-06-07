@@ -30,3 +30,6 @@ SELECT @@global.admin_port;
 
 #方式二:
 #SET @@global [|session].系统变量名 = 值;
+
+#注意:
+#如果是全局变量, 则需要加global, 如果是会话级别, 则需要加session, 如果不写, 则默认session
