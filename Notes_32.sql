@@ -122,3 +122,20 @@ DROP VIEW myv1, myv2, myv3;
 DESC myv1;
 
 SHOW CREATE VIEW myv1;
+
+#五、视图的更新
+CREATE OR REPLACE VIEW myv1
+AS
+SELECT last_name, email, salary*12*(1+IFNULL(commission_pct, 0)) AS "annual salary"
+FROM employees;
+
+CREATE OR REPLACE VIEW myv1
+AS
+SELECT last_name, email
+FROM employees;
+
+SELECT * FROM myv1;
+
+#1. 插入
+INSERT INTO myv1
+VALUES ('张飞', 'zf@qq.com');
