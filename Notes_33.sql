@@ -14,3 +14,8 @@ SELECT MAX(salary) AS mx_dep, department_id
 FROM employees
 GROUP BY department_id
 HAVING mx_dep > 12000;
+
+SELECT d.*, m.mx_dep
+FROM departments AS d
+JOIN emp_v2 AS m
+ON m.department_id = d.department_id;
