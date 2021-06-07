@@ -115,3 +115,5 @@ SELECT * FROM myv2;
 /*
 语法: drop view 视图名1, 视图名2, ...;
 */
+
+DROP VIEW myv1, myv2, myv3;
