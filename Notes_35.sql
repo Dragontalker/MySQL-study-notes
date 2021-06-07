@@ -91,6 +91,13 @@ SET SESSION transaction_isolation = 'read-commited';
 */
 
 #(1)声明并初始化
+#赋值操作符: = / :=
+#SET @用户变量名=值;
+#SET @用户变量名=值;;
+#SELECT #SET @用户变量名=值;
+
+#(2)赋值(更新用户变量的值)
+#方式一: 通过SET或SELECT
 #SET @用户变量名=值;
 #SET @用户变量名=值;;
 #SELECT #SET @用户变量名=值;
