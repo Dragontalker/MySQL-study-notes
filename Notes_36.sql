@@ -113,3 +113,13 @@ END $
 #调用
 CALL myp5('小昭', @bName);
 SELECT @bName;
+
+#案例2: 根据女神名, 返回对应的男神名和男神魅力值
+CREATE PROCEDURE myp6(IN beautyName VARCHAR(20), OUT boyName VARCHAR(20), OUT userCP INT)
+BEGIN
+	SELECT bo.boyName, bo.userCP INTO boyName, userCP
+    FROM boys AS bo
+    INNER JOIN beauty AS b
+    ON bo.id = b.boyfriend_id
+    WHERE b.name = beautyName;
+END $
