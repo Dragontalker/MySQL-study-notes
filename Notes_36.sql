@@ -64,3 +64,16 @@ END $
 
 #调用
 #CALL myp1()$
+
+#2. 创建带in模式参数的存储过程
+
+#案例1: 创建存储过程实现, 根据女神名, 查询对应的男神信息
+DELIMITER $
+CREATE PROCEDURE myp2(IN beautyName VARCHAR(20))
+BEGIN
+	SELECT bo.*
+    FROM boys AS bo
+    RIGHT JOIN beaty AS b
+    ON bo.id = b.boyfriend_id
+    WHERE b.name = beautyName;
+END $
