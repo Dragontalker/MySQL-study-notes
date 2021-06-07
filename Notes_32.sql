@@ -57,3 +57,8 @@ SELECT AVG(salary) AS ag, department_id
 FROM employees
 GROUP BY department_id;
 
+#(2)使用
+SELECT myv2.ag, g.grade_level 
+FROM myv2
+JOIN job_grades AS g
+ON myv2.ag BETWEEN g.lowest_sal AND g.highest_sal;
