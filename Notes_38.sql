@@ -63,3 +63,7 @@ BEGIN
     ON e.department_id = d.department_id
     WHERE d.department_name = deptName;
 END $
+
+#三、查看函数
+DELIMITER ;
+SHOW CREATE FUNCTION myf1;
