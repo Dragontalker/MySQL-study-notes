@@ -88,3 +88,11 @@ create or replace view 视图名
 as
 查询语句;
 */
+
+SELECT * FROM myv3;
+
+CREATE OR REPLACE VIEW myv3
+AS
+SELECT AVG(salary), job_id
+FROM employees
+GROUP BY job_id;
