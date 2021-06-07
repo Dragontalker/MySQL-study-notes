@@ -102,6 +102,9 @@ SET SESSION transaction_isolation = 'read-commited';
 #SET @用户变量名=值;;
 #SELECT #SET @用户变量名=值;
 
+#方式二: 通过SELECT INTO
+#SELECT 字段 INTO 变量名 FROM 表;
+
 #案例:
 SET @name='john';
 SET @name=100;
