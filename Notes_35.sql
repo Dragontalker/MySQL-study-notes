@@ -108,4 +108,12 @@ SET SESSION transaction_isolation = 'read-commited';
 #案例:
 SET @name='john';
 SET @name=100;
+SET @count=1;
+
+SELECT COUNT(*) INTO @count
+FROM employees;
+
+
+
+
 
