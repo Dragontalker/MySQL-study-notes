@@ -55,3 +55,7 @@ SET @@global.autocommit = 0;
 /*
 作用域: 仅仅针对于当前会话(连接)有效
 */
+
+#(1)查看所有的会话变量
+SHOW VARIABLES;
+SHOW SESSION VARIABLES;
