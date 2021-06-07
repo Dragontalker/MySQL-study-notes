@@ -77,3 +77,6 @@ BEGIN
     ON bo.id = b.boyfriend_id
     WHERE b.name = beautyName;
 END $
+
+#调用
+CALL myp2('柳岩')$
