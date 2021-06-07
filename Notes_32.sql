@@ -172,3 +172,11 @@ SELECT * FROM myv1;
 UPDATE myv1 
 SET m = 9000
 WHERE department_id = 10;
+
+#(2)常量视图
+CREATE OR REPLACE VIEW myv2
+AS
+SELECT 'john' NAME;
+
+UPDATE myv2
+SET NAME = 'lucy';
