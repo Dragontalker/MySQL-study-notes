@@ -40,3 +40,6 @@ SHOW GLOBAL VARIABLES;
 
 #(2)查看部分的全局变量
 SHOW GLOBAL VARIABLES LIKE '%char%';
+
+#(3)查看指定的全局变量的值
+SELECT @@global.autocommit;
