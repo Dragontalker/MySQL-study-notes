@@ -70,3 +70,6 @@ SELECT @@transaction_isolation;
 #(4)为某个会话变量赋值
 #方式1:
 SET @@session.transaction_isolation = 'read-uncommited';
+
+#方式2:
+SET SESSION transaction_isolation = 'read-commited';
