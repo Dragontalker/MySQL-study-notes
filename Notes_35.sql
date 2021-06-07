@@ -27,3 +27,6 @@ SELECT @@global.admin_port;
 #4. 为某个系统变量赋值
 #方式一:
 #SET [global. | session.]系统变量名 = 值;
+
+#方式二:
+#SET @@global [|session].系统变量名 = 值;
