@@ -67,3 +67,6 @@ END $
 #三、查看函数
 DELIMITER ;
 SHOW CREATE FUNCTION myf1;
+
+#四、删除函数
+DROP FUNCTION myf3;
