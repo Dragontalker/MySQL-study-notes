@@ -106,14 +106,17 @@ SET SESSION transaction_isolation = 'read-commited';
 #SELECT 字段 INTO 变量名 FROM 表;
 
 #案例:
+#声明并初始化
 SET @name='john';
 SET @name=100;
 SET @count=1;
 
+#赋值
 SELECT COUNT(*) INTO @count
 FROM employees;
 
 #(3)使用 => 查看某个用户变量的值
+#查看
 SELECT @count;
 
 
