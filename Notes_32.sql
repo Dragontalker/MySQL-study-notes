@@ -167,3 +167,8 @@ FROM employees
 GROUP BY department_id;
 
 SELECT * FROM myv1;
+
+#更新
+UPDATE myv1 
+SET m = 9000
+WHERE department_id = 10;
