@@ -19,3 +19,9 @@ CREATE PROCEDURE test_pro3(IN birth1 DATETIME, IN birth2 DATETIME, OUT result IN
 BEGIN
 	SELECT DATEDIFF(birth1, birth2) INTO result;
 END $
+
+#四、创建存储过程或函数实现传入一个日期, 格式化成xx年xx月xx日并返回
+CREATE PROCEDURE test_pro4(IN mydate DATETIME, OUT strDate VARCHAR(50))
+BEGIN
+	SELECT DATE_FORMAT(mydate, '%y年%m月%d日') INTO strDate;
+END $
