@@ -22,3 +22,8 @@ SHOW GLOBAL VARIABLES LIKE '%admin%';
 
 #3. 查看指定的某个系统变量的值
 SELECT @@admin_port;
+SELECT @@global.admin_port;
+
+#4. 为某个系统变量赋值
+#方式一:
+#SET [global. | session.]系统变量名 = 值;
