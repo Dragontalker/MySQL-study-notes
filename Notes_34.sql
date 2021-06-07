@@ -42,3 +42,6 @@ FROM books AS b
 JOIN bookType AS t
 ON b.btypeId = t.id
 WHERE price BETWEEN 90 AND 120;
+
+#5. 删除刚才建的视图
+DROP VIEW myv1;
