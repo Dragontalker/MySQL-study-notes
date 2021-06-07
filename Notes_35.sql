@@ -33,3 +33,7 @@ SELECT @@global.admin_port;
 
 #注意:
 #如果是全局变量, 则需要加global, 如果是会话级别, 则需要加session, 如果不写, 则默认session
+
+#1. 全局变量
+#(1)查看所有的全局变量
+SHOW GLOBAL VARIABLES;
