@@ -40,3 +40,14 @@ BEGIN
 END $
 
 SELECT myf1()$
+
+#2. 有参有返回
+#案例1: 根据员工名返回它的工资
+CREATE FUNCTION myf1(empName VARCHAR(20)) RETURNS DOUBLE
+BEGIN
+	DECLARE result DOUBLE DEFAULT 0;
+    SELECT salary INTO result
+    FROM employees
+    WHERE last_name = empName;
+    RETURN result;
+END $
