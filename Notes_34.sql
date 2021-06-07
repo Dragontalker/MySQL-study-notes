@@ -33,3 +33,12 @@ FROM books AS b
 JOIN bookType AS t
 ON b.btypeId = t.id
 WHERE price > 100;
+
+#4. 修改视图, 实现查询价格在90-120之间的书名和价格
+CREATE OR REPLACE VIEW myv1
+AS
+SELECT bname, price, btyleID
+FROM books AS b
+JOIN bookType AS t
+ON b.btypeId = t.id
+WHERE price BETWEEN 90 AND 120;
