@@ -113,7 +113,8 @@ SET @count=1;
 SELECT COUNT(*) INTO @count
 FROM employees;
 
-
+#(3)使用 => 查看某个用户变量的值
+SELECT @count;
 
 
 
