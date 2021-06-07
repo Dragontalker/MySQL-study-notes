@@ -154,3 +154,10 @@ SET @m=1;
 SET @n=2;
 SET @sum= @m + @n;
 SELECT @sum;
+
+#2. 局部变量
+DECLARE m INT DEFAULT 1;
+DECLARE n INT DEFAULT 2;
+DECLARE SUM INT;
+SET SUM = m + n;
+SELECT SUM;
