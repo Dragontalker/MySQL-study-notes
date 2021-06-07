@@ -136,3 +136,9 @@ BEGIN
 	SET a = a * 2;
     SET b = b * 2;
 END $
+
+#调用
+SET @m = 10$
+SET @n = 20$
+CALL myp8(@m, @n)$
+SELECT @m, @n;
