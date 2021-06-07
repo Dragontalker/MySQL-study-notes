@@ -25,3 +25,13 @@ CREATE PROCEDURE test_pro4(IN mydate DATETIME, OUT strDate VARCHAR(50))
 BEGIN
 	SELECT DATE_FORMAT(mydate, '%y年%m月%d日') INTO strDate;
 END $
+
+#五、创建存储过程或函数实现传入女生名称, 返回: 女神 and 男神 格式的字符串
+CREATE PROCEDURE test_pro5(IN beautyName VARCHAR(20), OUT str VARCHAR(50))
+BEGIN
+	SELECT CONCAT(beautyName, ' and ', bo.boyName) INTO str
+    FROM boys AS bo
+    RIGHT JOIN beauty AS b
+    ON bo.id = b.boyfriend_id
+    WHERE b.name = beautyName;
+END $
