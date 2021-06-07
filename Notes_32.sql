@@ -148,3 +148,14 @@ WHERE last_name = '张飞';
 #3. 删除
 DELETE FROM myv1
 WHERE last_name = '张无忌';
+
+#具备以下特点的视图不允许更新
+/*
+(1)包含以下关键字的slq语句
+	- 分组函数
+    - distinct
+    - group by
+    - having
+    - union
+    - union all
+*/
