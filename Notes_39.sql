@@ -41,3 +41,14 @@ BEGIN
     ELSE RETURN 'D';
     END IF;
 END $
+
+#二、循环结构
+
+/*
+分类: 
+while, loop, repeat
+
+循环控制:
+iterate类似于continue, 继续, 结束本次循环, 继续下一次
+leave类似于于break, 跳出, 结束当前所在的循环
+*/
