@@ -14,3 +14,9 @@ CREATE TABLE stringcontent(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     content VARCHAR(20)
 );
+
+DELIMITER $
+CREATE PROCEDURE test_ranstr_insert(IN insertCount INT)
+BEGIN
+
+END $
