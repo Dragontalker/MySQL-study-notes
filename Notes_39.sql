@@ -118,11 +118,11 @@ CREATE PROCEDURE test_while1(IN insertCount INT)
 BEGIN
 	DECLARE i INT DEFAULT 1;
     a: WHILE i <= insertCOunt DO
+		SET i = i + 1;
+        IF MOD(i, 2) != 0 THEN ITERATE a;
+        END IF;
 		INSERT INTO admin(username, password)
         VALUES (CONCAT('xiaohua', i), '1000');
-        IF i >= 20 THEN LEAVE a;
-        END IF;
-        SET i = i + 1;
 	END WHILE a;
 END $
 
