@@ -60,3 +60,11 @@ leave类似于于break, 跳出, 结束当前所在的循环
 	循环体;
 end while [标签];
 */
+
+#2. loop
+/*
+语法:
+[标签:] loop
+	循环体;
+end loop [标签];
+*/
