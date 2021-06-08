@@ -18,5 +18,8 @@ CREATE TABLE stringcontent(
 DELIMITER $
 CREATE PROCEDURE test_ranstr_insert(IN insertCount INT)
 BEGIN
-
+	DECLARE i INT DEFAULT 1; #定义一个循环变量i, 表示插入次数
+    WHILE i <= insertCount DO
+		SET i = i + 1;
+	END WHILE;
 END $
