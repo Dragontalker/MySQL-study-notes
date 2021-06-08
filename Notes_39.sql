@@ -67,4 +67,14 @@ end while [标签];
 [标签:] loop
 	循环体;
 end loop [标签];
+
+可以用来模拟简单的死循环
+*/
+
+#3. repeat
+/*
+[标签:] repeat
+	循环体;
+until 结束循环的条件
+end reapt [标签];
 */
