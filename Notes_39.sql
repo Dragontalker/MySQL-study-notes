@@ -80,7 +80,7 @@ end reapt [标签];
 */
 
 #没有添加循环控制语句
-#案例1: 批量插入, 根据次数插入到admin表中多条记录
+#案例: 批量插入, 根据次数插入到admin表中多条记录
 DROP PROCEDURE pro_while1;
 CREATE PROCEDURE pro_while1(IN insertCount INT)
 BEGIN
@@ -93,3 +93,19 @@ BEGIN
 END $
 
 CALL pro_while1(100)$
+
+#2. 添加leave语句
+#案例: 批量插入, 根据次数插入到admin表中多条记录, 如果次数>20则停止
+TRUNCATE TABLE admin$
+DROP PROCEDURE test_while1$
+CREATE PROCEDURE test_while1(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 1;
+    a: WHILE i <= insertCOunt DO
+		INSERT INTO admin(username, password)
+        VALUES (CONCAT('xiaohua', i), '1000');
+        IF i >= 20 THEN LEAVE a;
+        END IF;
+        SET i = i + 1;
+	END WHILE a;
+END $
