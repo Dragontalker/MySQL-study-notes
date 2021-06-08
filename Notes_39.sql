@@ -52,3 +52,11 @@ while, loop, repeat
 iterate类似于continue, 继续, 结束本次循环, 继续下一次
 leave类似于于break, 跳出, 结束当前所在的循环
 */
+
+#1. while
+/*
+语法:
+[标签:] while 循环条件 do
+	循环体;
+end while [标签];
+*/
