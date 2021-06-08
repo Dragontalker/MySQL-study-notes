@@ -27,4 +27,17 @@ elseif 条件2 then 语句2
 ...
 [else 语句n]
 end if;
+
+只能应用在begin end中
 */
+
+#案例1: 根据传入的成绩, 来返回等级
+DELIMITER $
+CREATE FUNCTION test_if(score INT) RETURNS CHAR
+BEGIN
+	IF score >= 90 AND score <= 100 THEN RETURN 'A';
+    ELSEIF score >= 80 THEN RETURN 'B';
+    ELSEIF score >= 60 THEN RETURN 'C';
+    ELSE RETURN 'D';
+    END IF;
+END $
