@@ -109,3 +109,30 @@ BEGIN
         SET i = i + 1;
 	END WHILE a;
 END $
+
+#3. 添加iterate语句
+#案例: 批量插入, 根据次数插入到admin表中多条记录, 只插入偶数次
+TRUNCATE TABLE admin$
+DROP PROCEDURE test_while1$
+CREATE PROCEDURE test_while1(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 1;
+    a: WHILE i <= insertCOunt DO
+		INSERT INTO admin(username, password)
+        VALUES (CONCAT('xiaohua', i), '1000');
+        IF i >= 20 THEN LEAVE a;
+        END IF;
+        SET i = i + 1;
+	END WHILE a;
+END $
+
+/*
+java中:
+int i = 0;
+while(i <= insertCount) {
+	i++;
+	if (i % 2 == 0)
+		continue;
+	插入;
+};
+*/
