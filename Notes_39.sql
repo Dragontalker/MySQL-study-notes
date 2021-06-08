@@ -78,3 +78,15 @@ end loop [标签];
 until 结束循环的条件
 end reapt [标签];
 */
+
+#没有添加循环控制语句
+#案例: 批量插入, 根据次数插入到admin表中多条记录
+CREATE PROCEDURE pro_while1(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 1;
+    WHILE i <= insertCount DO
+		INSERT INTO admin(username, PASSWORD)
+        VALUES ('rose' + i,'666');
+        SET i = i + 1;
+	END WHILE;
+END $
