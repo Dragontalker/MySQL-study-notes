@@ -80,13 +80,16 @@ end reapt [标签];
 */
 
 #没有添加循环控制语句
-#案例: 批量插入, 根据次数插入到admin表中多条记录
+#案例1: 批量插入, 根据次数插入到admin表中多条记录
+DROP PROCEDURE pro_while1;
 CREATE PROCEDURE pro_while1(IN insertCount INT)
 BEGIN
 	DECLARE i INT DEFAULT 1;
     WHILE i <= insertCount DO
 		INSERT INTO admin(username, PASSWORD)
-        VALUES ('rose' + i,'666');
+        VALUES (CONCAT('rose', i),'666');
         SET i = i + 1;
 	END WHILE;
 END $
+
+CALL pro_while1(100)$
